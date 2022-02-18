@@ -9,7 +9,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
-  background-color: #fefefe;
+  background-color: #E5E5E5 !important;
 }
 
 a {
@@ -386,16 +386,22 @@ a {
 .notification-dropDown li {
   list-style: none;
 }
-.notification-title {
+.notification-title,
+.common-title {
   /* border: 1px solid black; */
   width: 20rem;
   margin-left: 10px;
 }
-.notification-title h6 {
+.stock-list {
+  margin-top: 5rem;
+}
+.notification-title h6,
+.common-title h5 {
   font-size: 13px;
   margin-bottom: 0px;
 }
-.notification-title p {
+.notification-title p,
+.common-title p {
   font-size: 9px;
   margin-top: 0px;
   color: grey;
@@ -414,6 +420,23 @@ a {
   line-height: 14px;
   border: 0;
   color: #8950fc;
+}
+.common-count {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  right: 12px;
+  padding: 8px 15px;
+  font-family: IBM Plex Sans;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 23px;
+  text-align: center;
+
+  color: #ffffff;
+  background: #49cb67;
+  border-radius: 6px;
 }
 .notification-profile-button:focus {
   box-shadow: none !important;
@@ -434,7 +457,8 @@ a {
   color: #888c9f;
   border: 0px;
 }
-.profile-image {
+.profile-image,
+.common-image {
   margin-top: 0.1rem;
   border: 1px solid whitesmoke;
   width: 2rem;
@@ -442,7 +466,8 @@ a {
   height: 2rem;
   margin-left: -2px !important;
 }
-.profile-title {
+.profile-title,
+.common-title {
   font-weight: 100;
   font-size: 12px;
   margin-right: 0px !important;
@@ -475,14 +500,58 @@ a {
   justify-content: center;
   align-items: flex-start;
   padding: 15px;
-
+  top:2rem;
+  background: #ffffff;
+  border-radius: 10px;
+}
+.main-stocks-container {
   position: absolute;
-  /* width: 1177px; */
-  /* height: 475px; */
+  /* width: 576.5px; */
+  height: 356px;
   /* left: 293px; */
-  border: 1px solid black;
-  /* top: 145px; */
+  /* top: 650px; */
 
   background: #ffffff;
   border-radius: 12px;
+}
+.main-customer-container {
+  position: absolute;
+  /* width: 576.5px; */
+  height: 356px;
+  left: 892px;
+  /* top: 650px; */
+
+  background: #ffffff;
+  border-radius: 12px;
+}
+.main-stocks-container h6,
+.main-customer-container h6 {
+  position: absolute;
+  width: 150px;
+  height: 23px;
+  left: 30px;
+  top: 24px;
+
+  font-family: IBM Plex Sans;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 23px;
+
+  color: #212121;
+}
+/* //customer page  */
+.user-row-data {
+  border: 1px solid black;
+}
+.customer-main-container {
+  position: absolute;
+  width: 1050px;
+  padding: 2rem;
+  height: 100%;
+  /* left: 293px; */
+  /* top: 145px; */
+
+  background: #ffffff;
+  border-radius: 8px;
 }
