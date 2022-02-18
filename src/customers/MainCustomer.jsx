@@ -2,7 +2,7 @@ import React from 'react';
 import TopCustomer from './TopCustomer';
 const MainCustomer=()=>{
     return (<>
-    <div className='col-lg-6 main-customer-container'>
+    <div className='col-lg-5 main-customer-container'>
         <h6>Top Customers</h6>
         <TopCustomer/>
     </div>

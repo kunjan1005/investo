@@ -4,9 +4,9 @@ import MainCustomer from '../customers/MainCustomer';
 import MainStocks from '../stocks/MainStock';
 const Dashboard=()=>{
     return(<>
-      <div className='container-fluid' >
+      <div className='' >
         <MainChart/>
-        <div className='row'style={{marginTop:'15rem'}}>
+        <div className='row'style={{marginTop:'5rem'}}>
           <MainStocks/>
           <MainCustomer/>
         </div>
