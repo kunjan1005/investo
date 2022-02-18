@@ -1,6 +1,7 @@
 import React from 'react';
 import { MDBDataTableV5 } from 'mdbreact';
 import { customers } from '../sampleData/customer';
+
 // import Result from '../components/result';
 
 export default function WithMultipleCheckboxes() {

@@ -1,68 +1,89 @@
-export const customers ={
-    columns: [
-      {
-        label: 'Prefix',
-        field: 'name',
-        width: 150,
-        attributes: {
-          'aria-controls': 'DataTable',
-          'aria-label': 'Name',
-        },
+export const customers = {
+  columns: [
+    {
+      label: "Prefix",
+      field: "name",
+      width: 150,
+      attributes: {
+        "aria-controls": "DataTable",
+        "aria-label": "Name",
       },
-      {
-        label: 'Name/Last name/Email',
-        field: 'position',
-        width: 270,
-      },
-      {
-        label: 'Nation iD',
-        field: 'office',
-        width: 200,
-      },
-      {
-        label: 'Account',
-        field: 'age',
-        sort: 'asc',
+    },
+    {
+      label: "Name/Last name/Email",
+      field: "position",
+      width: 270,
+    },
+    {
+      label: "Nation iD",
+      field: "office",
+      width: 200,
+    },
+    {
+      label: "Account",
+      field: "age",
+      sort: "asc",
+      width: 100,
+    },
+    {
+      label: "Phone number",
+      field: "date",
+      sort: "disabled",
+      width: 150,
+    },
+    {
+      label: "Status",
+      field: "status",
+      sort: "disabled",
+      width: 100,
+    },
+    {
+        label: "Action",
+        field: "action",
+        sort: "disabled",
         width: 100,
       },
-      {
-        label: 'Phone number',
-        field: 'date',
-        sort: 'disabled',
-        width: 150,
-      },
-      {
-        label: 'Status',
-        field: 'status',
-        sort: 'disabled',
-        width: 100,
-      },
-    ],
-    rows: [
-      {
-        name: 'Tiger Nixon',
-        position: 'System Architect',
-        office: 'Edinburgh',
-        age: '61',
-        date: '2011/04/25',
-        status:<input type='checkbox' placeholder="check"/>
-      },
-    //   {
-    //     name: 'Garrett Winters',
-    //     position: 'Accountant',
-    //     office: 'Tokyo',
-    //     age: '63',
-    //     date: '2011/07/25',
-    //     salary: '$170',
-    //   },
-    //   {
-    //     name: 'Ashton Cox',
-    //     position: 'Junior Technical Author',
-    //     office: 'San Francisco',
-    //     age: '66',
-    //     date: '2009/01/12',
-    //     salary: '$86',
-    //   },
+  ],
+  rows: [
+    {
+      name: "Tiger Nixon",
+      position: "System Architect",
+      office: "Edinburgh",
+      age: "61",
+      date: "2011/04/25",
+      status:(<span className="customer-status">Registred</span>),
+      action: (
+        <span className="">
+          <i className="fa-solid fa-pencil edit-icon-button"></i>
+        </span>
+      ),
+    },
+    {
+      name: "Garrett Winters",
+      position: "Accountant",
+      office: "Tokyo",
+      age: "63",
+      date: "2011/07/25",
+      status:(<span className="customer-status">Registred</span>),
+      action: (
+        <span className="">
+          <i className="fa-solid fa-pencil edit-icon-button"></i>
+        </span>
+      ),
+    },
+    {
+      name: "Ashton Cox",
+      position: "Junior Technical Author",
+      office: "San Francisco",
+      age: "66",
+      date: "2009/01/12",
+      status:(<span className="customer-status">Registred</span>),
+      action: (
+        <span className="">
+          <i className="fa-solid fa-pencil edit-icon-button"></i>
+        </span>
+      ),
+    },
     //   {
     //     name: 'Cedric Kelly',
     //     position: 'Senior Javascript Developer',
@@ -495,5 +516,5 @@ export const customers ={
     //     date: '2011/01/25',
     //     salary: '$112',
     //   },
-    ],
-  }
+  ],
+};
