@@ -57,7 +57,6 @@ const Topnav = () => {
             </div>
           </div>
         </nav>
-        <SubNav/>
         <Body/>
       </div>
     </>

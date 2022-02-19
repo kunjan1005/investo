@@ -53,37 +53,29 @@ const Sidebar = () => {
                   </ul>:null}
                 </li>
                 <li>
-                  <a herf='#'>
-                    <i className="ion-ios-briefcase-outline"></i>{" "}
-                    <span className="">TRADING</span>
-                  </a>
-                  {/* <ul className="nav-flyout">
-                    <li>
-                      <a href="#">
-                        <i className="ion-ios-flame-outline"></i>Burn
-                      </a>
+                <NavLink to='#'  onClick={()=>dropDown==0?showDropDown(3):showDropDown(0)}>
+                    <i className="ion-ios-settings"></i>{" "}
+                    <span className="">Trading</span>
+                  </NavLink>
+                  {dropDown===3?<ul className="sub-nav">
+                  <li>
+                      <NavLink to='/trading/order'>
+                        <i className="ion-ios-color-filter-outline"></i>Add order
+                      </NavLink>
                     </li>
                     <li>
-                      <a href="#">
-                        <i className="ion-ios-lightbulb-outline"></i>Bulbs
-                      </a>
+                      <NavLink to='/trading'>
+                        <i className="ion-ios-color-filter-outline"></i>Order list
+                      </NavLink>
                     </li>
                     <li>
-                      <a href="#">
-                        <i className="ion-ios-location-outline"></i>Where You
-                      </a>
+                    <NavLink to='/trading/history'>
+                        <i className="ion-ios-clock-outline"></i>Trading history
+                      </NavLink>
                     </li>
-                    <li>
-                      <a href="#">
-                        <i className="ion-ios-locked-outline"></i>On Lock
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#">
-                        <i className="ion-ios-navigate-outline"></i>Ghostface
-                      </a>
-                    </li>
-                  </ul> */}
+                   
+                  </ul>:null}
+                  
                 </li>
                 <li>
                   <a herf='#'>
