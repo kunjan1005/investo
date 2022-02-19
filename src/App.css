@@ -45,9 +45,10 @@ Sidebar
   top: 0;
   overflow: hidden;
   background-color: #19222a;
-  -webkit-transform: translateZ(0);
+  
   visibility: visible;
-  -webkit-backface-visibility: hidden;
+  /* -webkit-transform: translateZ(0); */
+  /* -webkit-backface-visibility: hidden; */
 }
 .sidebar header {
   width: 100%;
@@ -363,11 +364,15 @@ a {
 .notification-title,
 .common-title {
   /* border: 1px solid black; */
-  width: 20rem;
+  width: 0rem;
   margin-left: 10px;
 }
 .stock-list {
-  margin-top: 5rem;
+  margin-top: 2rem;
+}
+.row {
+    margin-left: 0 !important;
+    margin-right: 0px !important;
 }
 .notification-title h6,
 .common-title h5 {
@@ -387,7 +392,6 @@ a {
   background: #eee5ff;
   border-radius: 6px;
 
-  font-family: IBM Plex Sans;
   font-style: normal;
   font-weight: 600;
   font-size: 11px;
@@ -399,9 +403,8 @@ a {
   position: absolute;
   width: 40px;
   height: 40px;
-  right: 12px;
+  /* right: 12px; */
   padding: 8px 15px;
-  font-family: IBM Plex Sans;
   font-style: normal;
   font-weight: bold;
   font-size: 18px;
@@ -423,7 +426,6 @@ a {
   background: #1e1e2d;
   border-radius: 6px;
   width: 95px;
-  font-family: IBM Plex Sans;
   font-style: normal;
   font-weight: 600;
   font-size: 12px;
@@ -479,7 +481,7 @@ a {
   border-radius: 10px;
 }
 .main-stocks-container {
-  position: absolute;
+  /* position: absolute; */
   /* width: 576.5px; */
   height: 356px;
   /* left: 293px; */
@@ -489,10 +491,10 @@ a {
   border-radius: 12px;
 }
 .main-customer-container {
-  position: absolute;
+  /* position: absolute; */
   /* width: 576.5px; */
   height: 356px;
-  left: 892px;
+  /* left: 892px; */
   /* top: 650px; */
 
   background: #ffffff;
@@ -500,13 +502,11 @@ a {
 }
 .main-stocks-container h6,
 .main-customer-container h6 {
-  position: absolute;
-  width: 150px;
+  /* position: absolute; */
+  width: 100%;
   height: 23px;
-  left: 30px;
-  top: 24px;
 
-  font-family: IBM Plex Sans;
+
   font-style: normal;
   font-weight: 600;
   font-size: 18px;
