@@ -10,7 +10,7 @@ const TopCustomer = () => {
         <CustomerList />
         <CustomerList />
         <CustomerList />
-
+        
       </div>
     </>
   );
