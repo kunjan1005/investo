@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import logo from "../images/logos/black.svg";
 import NotificationDropDown from "../notification/NotificationDropDown";
 import Body from "../components/Body";
+import SubNav from "./SubNav";
 // import '../custom/topnav'
 // import Button from '@mui/material/Button'
 const Topnav = () => {
@@ -56,6 +57,7 @@ const Topnav = () => {
             </div>
           </div>
         </nav>
+        <SubNav/>
         <Body/>
       </div>
     </>

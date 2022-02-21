@@ -4,8 +4,11 @@ import CustomerDataTable from './DataTable'
 const MainCustomerPage=()=>{
     return(<>
       <div className='container-fluid p-5'>
-        {/* <MainChart/> */}
+              
         <div className='row customer-main-container'>
+            <div className='row '>
+                <button className='btn btn-default customer-filter'>more filter</button>
+            </div>
             <Scrollbars>
           <CustomerDataTable/>
           </Scrollbars>

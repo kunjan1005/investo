@@ -9,9 +9,11 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
-  background-color: #E5E5E5 !important;
+  background-color: #e5e5e5 !important;
 }
-
+.row{
+  --bs-gutter-x: none !important;
+}
 a {
   text-decoration: none;
   -webkit-transition: all 0.6s ease;
@@ -76,7 +78,7 @@ Sidebar Nav
 .sidebar-nav ul {
   list-style: none;
   display: block;
-  padding: 0;
+  /* padding: 0; */
   margin: 0;
 }
 .header-title img {
@@ -121,37 +123,9 @@ Sidebar Nav
   right: 0.75em;
   top: 45%;
 }
-.sidebar-nav .nav-flyout {
-  position: absolute;
-  background-color: #080d11;
-  z-index: 9;
-  left: 2.5em;
-  top: 0;
-  height: 100vh;
-  -webkit-transform: translateX(100%);
-  -moz-transform: translateX(100%);
-  -ms-transform: translateX(100%);
-  -o-transform: translateX(100%);
-  transform: translateX(100%);
-  -webkit-transition: all 0.5s ease;
-  -moz-transition: all 0.5s ease;
-  transition: all 0.5s ease;
+.sub-nav{
+  left:10px !important;
 }
-.sidebar-nav .nav-flyout a:hover {
-  background-color: rgba(255, 255, 255, 0.05);
-}
-.sidebar-nav ul > li:hover .nav-flyout {
-  -webkit-transform: translateX(0);
-  -moz-transform: translateX(0);
-  -ms-transform: translateX(0);
-  -o-transform: translateX(0);
-  transform: translateX(0);
-  -webkit-transition: all 0.5s ease;
-  -moz-transition: all 0.5s ease;
-  transition: all 0.5s ease;
-}
-/* //top nav  */
-
 a {
   text-decoration: none;
 }
@@ -504,7 +478,7 @@ a {
   justify-content: center;
   align-items: flex-start;
   padding: 15px;
-  top:2rem;
+  top: 2rem;
   background: #ffffff;
   border-radius: 10px;
 }
@@ -556,4 +530,51 @@ a {
 
   background: #ffffff;
   border-radius: 8px;
+}
+.edit-icon-button {
+  width: 32px;
+  height: 32px;
+  right: 30px;
+  top: 382px;
+  background: #f3f6f9;
+  border-radius: 6px;
+  padding: 6px;
+}
+.customer-status {
+  /* display: flex;
+flex-direction: row; */
+  align-items: flex-start;
+  padding: 6px 12px;
+
+  /* position: absolute; */
+  width: 89px;
+  height: 26px;
+
+  color: #8950fc;
+  background: #eee5ff;
+  border-radius: 4px;
+}
+.customer-filter {
+
+  padding: 7px 13px;
+  
+  /* position: absolute; */
+  width: 8rem !important;
+  /* height: 33px; */
+  float: right !important;
+ 
+  
+  background: #F3F6F9 !important;
+  border-radius: 4px;
+  color: #6993FF !important;
+}
+.top-navigate-link{
+  margin:5px;
+  text-decoration: none;
+
+  font-size: 15px;
+  color:grey !important;
+}
+.active{
+   color: black;
 }

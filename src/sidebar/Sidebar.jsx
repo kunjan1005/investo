@@ -1,8 +1,10 @@
 import React from "react";
+import { useState } from "react";
 import Scrollbars from "react-custom-scrollbars-2";
 import { NavLink } from "react-router-dom";
 import logo from "../images/logos/black.svg";
 const Sidebar = () => {
+  let [dropDown,showDropDown]=useState(0);
   return (
     <>
       <section className="app col-lg-2">
@@ -14,59 +16,41 @@ const Sidebar = () => {
             <Scrollbars>
               <ul>
                 <li>
-                  <a herf='#'>
+                  <NavLink to='#' onClick={()=>dropDown==0?showDropDown(1):showDropDown(0)}>
                     <i className="ion-bag"></i> <span>MAIN MENU</span>
-                  </a>
-                  {/* <ul className="nav-flyout">
+                  </NavLink>
+                  {dropDown===1?<ul className="sub-nav">
                     <li>
-                      <a href="#">
-                        <i className="ion-ios-color-filter-outline"></i>Derps
-                      </a>
+                      <NavLink to='/'>
+                        <i className="ion-ios-color-filter-outline"></i>Dashboard
+                      </NavLink>
                     </li>
                     <li>
-                      <a href="#">
-                        <i className="ion-ios-clock-outline"></i>Times
-                      </a>
+                    <NavLink to='/market'>
+                        <i className="ion-ios-clock-outline"></i>Market
+                      </NavLink>
                     </li>
-                    <li>
-                      <a href="#">
-                        <i className="ion-android-star-outline"></i>Hates
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#">
-                        <i className="ion-heart-broken"></i>Beat
-                      </a>
-                    </li>
-                  </ul> */}
+                   
+                  </ul>:null}
                 </li>
                 <li>
-                  <a herf='#'>
+                  <NavLink to='#'  onClick={()=>dropDown==0?showDropDown(2):showDropDown(0)}>
                     <i className="ion-ios-settings"></i>{" "}
                     <span className="">CUSTOMERS</span>
-                  </a>
-                  {/* <ul className="nav-flyout">
+                  </NavLink>
+                  {dropDown===2?<ul className="sub-nav">
                     <li>
-                      <a href="#">
-                        <i className="ion-ios-alarm-outline"></i>Watch
-                      </a>
+                      <NavLink to='/customer'>
+                        <i className="ion-ios-color-filter-outline"></i>Customer List
+                      </NavLink>
                     </li>
                     <li>
-                      <a href="#">
-                        <i className="ion-ios-camera-outline"></i>Creeper
-                      </a>
+                    <NavLink to='/customer/account'>
+                        <i className="ion-ios-clock-outline"></i>Account
+                        </NavLink>
                     </li>
-                    <li>
-                      <a href="#">
-                        <i className="ion-ios-chatboxes-outline"></i>Hate
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#">
-                        <i className="ion-ios-cog-outline"></i>Grinder
-                      </a>
-                    </li>
-                  </ul> */}
+                   
+                  </ul>:null}
                 </li>
                 <li>
                   <a herf='#'>
@@ -168,33 +152,7 @@ const Sidebar = () => {
                     <i className="ion-ios-navigate-outline"></i>{" "}
                     <span className="">IPO</span>
                   </a>
-                  {/* <ul className="nav-flyout">
-                    <li>
-                      <a href="#">
-                        <i className="ion-ios-flame-outline"></i>Burn
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#">
-                        <i className="ion-ios-lightbulb-outline"></i>Bulbs
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#">
-                        <i className="ion-ios-location-outline"></i>Where You
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#">
-                        <i className="ion-ios-locked-outline"></i>On Lock
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#">
-                        <i className="ion-ios-navigate-outline"></i>Ghostface
-                      </a>
-                    </li>
-                  </ul> */}
+               
                 </li>
                 <li>
                   <a herf='#'>

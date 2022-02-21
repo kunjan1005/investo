@@ -7,7 +7,7 @@ const Routing=()=>{
     return(<>
     <Routes>
         <Route excat path='/' element={<Dashboard/>}/>
-        <Route excat path='/customer' element={<MainCustomerPage/>}/>
+        <Route activeClass='active' excat path='/customer' element={<MainCustomerPage/>}/>
     </Routes>
     </>)
 }
