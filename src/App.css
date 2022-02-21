@@ -389,7 +389,8 @@ a {
 .common-title {
   /* border: 1px solid black; */
   /* width: 0rem; */
-  margin-left: 10px;
+  margin-left: 4px;
+
 }
 .stock-list {
   margin-top: 2rem;
@@ -412,7 +413,7 @@ a {
 .notification-profile-button {
   width: 74px;
   height: 26px;
-
+  margin-left: 15rem;
   background: #eee5ff;
   border-radius: 6px;
 
@@ -449,7 +450,7 @@ a {
   height: 24px;
   background: #1e1e2d;
   border-radius: 6px;
-  width: 95px;
+  width: auto ;
   font-style: normal;
   font-weight: 600;
   font-size: 12px;
@@ -461,9 +462,9 @@ a {
 .common-image {
   margin-top: 0.1rem;
   border: 1px solid whitesmoke;
-  width: 2rem;
-  border-radius: 50%;
-  height: 2rem;
+  width: 2.5rem;
+  border-radius: 12%;
+  height: 2.5rem;
   margin-left: -2px !important;
 }
 .profile-title,

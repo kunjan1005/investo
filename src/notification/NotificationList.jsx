@@ -3,7 +3,7 @@ import logo from "../images/logos/black.svg";
 const NotificationList = () => {
   return (
     <>
-      <div className="notification-profile d-flex justify-content-around">
+      <div className="notification-profile d-flex">
         <div className="profile-image">
           <img src={logo} alt="profile image" />
         </div>
@@ -13,7 +13,7 @@ const NotificationList = () => {
         </div>
         <div className="notification-profile-btn">
           <button className="notification-profile-button" type="submit">
-            Small
+            seen
           </button>
         </div>
       </div>
