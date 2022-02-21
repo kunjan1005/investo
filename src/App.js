@@ -6,7 +6,7 @@ import Topnav from './navbar/Topnav';
 
 function App() {
   return (
-    <div className='row'>
+    <div className='row g-0'>
         <Sidebar/>
         <Topnav/>
     </div>
