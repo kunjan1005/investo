@@ -40,7 +40,7 @@ Sidebar
 .sidebar {
   position: fixed;
   width: 13em;
-  border-radius: 0px 10px 10px 0px;
+  /* border-radius: 0px 10px 10px 0px; */
   height: 100vh;
   top: 0;
   overflow: hidden;
@@ -162,6 +162,8 @@ a {
   background-color: #fff;
   padding: 1rem 1.15rem;
   border-bottom: 1px solid #eceef3;
+  margin-left: -17px !important;
+  width: 1150px;
   /*
   |-----------------------------------
   | Start navbar logo or brand etc..

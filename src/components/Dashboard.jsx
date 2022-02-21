@@ -6,7 +6,7 @@ const Dashboard=()=>{
     return(<>
       <div className='' >
         <MainChart/>
-        <div className='row'style={{marginTop:'5rem'}}>
+        <div className='row justify-content-center'style={{marginTop:'5rem'}}>
           <MainStocks/>
           <MainCustomer/>
         </div>
