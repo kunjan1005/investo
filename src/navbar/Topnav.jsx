@@ -1,12 +1,15 @@
 import React, { useState } from "react";
 import logo from "../images/logos/black.svg";
 import NotificationDropDown from "../notification/NotificationDropDown";
+import ProfileDropDown from "../profile/ProfileDropDown";
 import Body from "../components/Body";
 import SubNav from "./SubNav";
 // import '../custom/topnav'
 // import Button from '@mui/material/Button'
 const Topnav = () => {
   let [show, setShow] = useState(false);
+  let [showProfile, setShowProfile] = useState(false);
+
   return (
     <>
       <div className="col-lg-10">
@@ -18,11 +21,7 @@ const Topnav = () => {
                 <span></span>
                 <span></span>
               </button>
-              <a href="#">
-                <h4>
-                  Awesome<span>logo</span>
-                </h4>
-              </a>
+
             </div>
 
             <div className="navbar-menu col-lg-8" id="open-navbar1">
@@ -49,15 +48,18 @@ const Topnav = () => {
                   <a href="#" className="profile-title">
                     admin
                   </a>
-                  <span>
+                  <span
+                    onClick={() => (showProfile ? setShowProfile(false) : setShowProfile(true))}
+                  >
                     <img src={logo} className="profile-image" />
                   </span>
+                  {showProfile ? <ProfileDropDown /> : null}
                 </li>
               </ul>
             </div>
           </div>
         </nav>
-        <Body/>
+        <Body />
       </div>
     </>
   );

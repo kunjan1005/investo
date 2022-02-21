@@ -55,6 +55,13 @@ Sidebar
   display: block;
   padding: 0.75em 1em;
 }
+.sidebar-nav a{
+  text-decoration: none;
+  color:#4A4B68 !important;
+}
+.sub-nav  a{
+  color: #888C9F !important;
+}
 
 /* -------------
 Sidebar Nav
@@ -337,26 +344,41 @@ a {
   font-weight: 500;
 }
 .notification-dropDown {
-  /* border: 1px solid whitesmoke;
-  background-color: white;
-  height: 15rem;
- 
-  position: fixed;
-  top: 50px;
-  border-radius: 1rem;
-  padding: 1rem;
-  right: 50px;
-  width: 30rem; */
   z-index: 999;
   opacity: 1;
   position: fixed;
-  width: 628px;
-  height: 479px;
+  width: 500px;
+  height: 350px;
   right: 30px;
   top: 50px;
   background: #ffffff;
   box-shadow: 0px 0px 30px rgba(56, 71, 109, 0.09);
   border-radius: 12px;
+}
+.profile-dropDown{
+  z-index: 999;
+  opacity: 1;
+  position: fixed;
+  width: 250px;
+  height: 250px;
+  right: 30px;
+  top: 50px;
+  background: #ffffff;
+  box-shadow: 0px 0px 30px rgba(56, 71, 109, 0.09);
+  border-radius: 12px;
+
+}
+.profile-edit-btn{
+  margin-left: 80px;
+}
+.profile-dropdown-container-2{
+  color:black;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 13px;
+}
+.profile-dropdown-container-2 ul{
+  line-height: 30px;
+  list-style: none;
 }
 .notification-dropDown li {
   list-style: none;
@@ -364,7 +386,7 @@ a {
 .notification-title,
 .common-title {
   /* border: 1px solid black; */
-  width: 0rem;
+  /* width: 0rem; */
   margin-left: 10px;
 }
 .stock-list {
