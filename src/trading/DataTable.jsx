@@ -1,11 +1,11 @@
 import React from 'react';
 import { MDBDataTableV5 } from 'mdbreact';
-import { customers } from '../sampleData/customer';
+import { orders } from '../sampleData/order';
 
 // import Result from '../components/result';
 
 export default function WithMultipleCheckboxes() {
-  const [datatable, setDatatable] = React.useState(customers);
+  const [datatable, setDatatable] = React.useState(orders);
   const [checkbox1, setCheckbox1] = React.useState([]);
 
   const showLogs2 = (e) => {

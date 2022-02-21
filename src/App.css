@@ -9,9 +9,11 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
-  background-color: #E5E5E5 !important;
+  background-color: #e5e5e5 !important;
 }
-
+.row{
+  --bs-gutter-x: none !important;
+}
 a {
   text-decoration: none;
   -webkit-transition: all 0.6s ease;
@@ -38,7 +40,7 @@ Sidebar
 .sidebar {
   position: fixed;
   width: 13em;
-  border-radius: 0px 10px 10px 0px;
+  /* border-radius: 0px 10px 10px 0px; */
   height: 100vh;
   top: 0;
   overflow: hidden;
@@ -52,6 +54,13 @@ Sidebar
   width: 100%;
   display: block;
   padding: 0.75em 1em;
+}
+.sidebar-nav a{
+  text-decoration: none;
+  color:#4A4B68 !important;
+}
+.sub-nav  a{
+  color: #888C9F !important;
 }
 
 /* -------------
@@ -76,7 +85,7 @@ Sidebar Nav
 .sidebar-nav ul {
   list-style: none;
   display: block;
-  padding: 0;
+  /* padding: 0; */
   margin: 0;
 }
 .header-title img {
@@ -121,37 +130,9 @@ Sidebar Nav
   right: 0.75em;
   top: 45%;
 }
-.sidebar-nav .nav-flyout {
-  position: absolute;
-  background-color: #080d11;
-  z-index: 9;
-  left: 2.5em;
-  top: 0;
-  height: 100vh;
-  -webkit-transform: translateX(100%);
-  -moz-transform: translateX(100%);
-  -ms-transform: translateX(100%);
-  -o-transform: translateX(100%);
-  transform: translateX(100%);
-  -webkit-transition: all 0.5s ease;
-  -moz-transition: all 0.5s ease;
-  transition: all 0.5s ease;
+.sub-nav{
+  left:10px !important;
 }
-.sidebar-nav .nav-flyout a:hover {
-  background-color: rgba(255, 255, 255, 0.05);
-}
-.sidebar-nav ul > li:hover .nav-flyout {
-  -webkit-transform: translateX(0);
-  -moz-transform: translateX(0);
-  -ms-transform: translateX(0);
-  -o-transform: translateX(0);
-  transform: translateX(0);
-  -webkit-transition: all 0.5s ease;
-  -moz-transition: all 0.5s ease;
-  transition: all 0.5s ease;
-}
-/* //top nav  */
-
 a {
   text-decoration: none;
 }
@@ -188,6 +169,8 @@ a {
   background-color: #fff;
   padding: 1rem 1.15rem;
   border-bottom: 1px solid #eceef3;
+  margin-left: -17px !important;
+  width: 1150px;
   /*
   |-----------------------------------
   | Start navbar logo or brand etc..
@@ -363,26 +346,41 @@ a {
   font-weight: 500;
 }
 .notification-dropDown {
-  /* border: 1px solid whitesmoke;
-  background-color: white;
-  height: 15rem;
- 
-  position: fixed;
-  top: 50px;
-  border-radius: 1rem;
-  padding: 1rem;
-  right: 50px;
-  width: 30rem; */
   z-index: 999;
   opacity: 1;
   position: fixed;
-  width: 628px;
-  height: 479px;
+  width: 500px;
+  height: 350px;
   right: 30px;
   top: 50px;
   background: #ffffff;
   box-shadow: 0px 0px 30px rgba(56, 71, 109, 0.09);
   border-radius: 12px;
+}
+.profile-dropDown{
+  z-index: 999;
+  opacity: 1;
+  position: fixed;
+  width: 250px;
+  height: 250px;
+  right: 30px;
+  top: 50px;
+  background: #ffffff;
+  box-shadow: 0px 0px 30px rgba(56, 71, 109, 0.09);
+  border-radius: 12px;
+
+}
+.profile-edit-btn{
+  margin-left: 80px;
+}
+.profile-dropdown-container-2{
+  color:black;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 13px;
+}
+.profile-dropdown-container-2 ul{
+  line-height: 30px;
+  list-style: none;
 }
 .notification-dropDown li {
   list-style: none;
@@ -390,8 +388,9 @@ a {
 .notification-title,
 .common-title {
   /* border: 1px solid black; */
-  width: 0rem;
-  margin-left: 10px;
+  /* width: 0rem; */
+  margin-left: 4px;
+
 }
 .stock-list {
   margin-top: 2rem;
@@ -414,7 +413,7 @@ a {
 .notification-profile-button {
   width: 74px;
   height: 26px;
-
+  margin-left: 15rem;
   background: #eee5ff;
   border-radius: 6px;
 
@@ -451,7 +450,7 @@ a {
   height: 24px;
   background: #1e1e2d;
   border-radius: 6px;
-  width: 95px;
+  width: auto ;
   font-style: normal;
   font-weight: 600;
   font-size: 12px;
@@ -463,9 +462,9 @@ a {
 .common-image {
   margin-top: 0.1rem;
   border: 1px solid whitesmoke;
-  width: 2rem;
-  border-radius: 50%;
-  height: 2rem;
+  width: 2.5rem;
+  border-radius: 12%;
+  height: 2.5rem;
   margin-left: -2px !important;
 }
 .profile-title,
@@ -502,7 +501,7 @@ a {
   justify-content: center;
   align-items: flex-start;
   padding: 15px;
-  top:2rem;
+  top: 2rem;
   background: #ffffff;
   border-radius: 10px;
 }
@@ -554,4 +553,137 @@ a {
 
   background: #ffffff;
   border-radius: 8px;
+}
+.edit-icon-button {
+  width: 32px;
+  height: 32px;
+  right: 30px;
+  top: 382px;
+  background: #f3f6f9;
+  border-radius: 6px;
+  padding: 6px;
+}
+.customer-status {
+  /* display: flex;
+flex-direction: row; */
+  align-items: flex-start;
+  padding: 6px 12px;
+
+  /* position: absolute; */
+  width: 89px;
+  height: 26px;
+
+  color: #8950fc;
+  background: #eee5ff;
+  border-radius: 4px;
+}
+.customer-filter {
+
+  padding: 7px 13px;
+  
+  /* position: absolute; */
+  width: 8rem !important;
+  /* height: 33px; */
+  float: right !important;
+ 
+  
+  background: #F3F6F9 !important;
+  border-radius: 4px;
+  color: #6993FF !important;
+}
+.top-navigate-link{
+  margin:5px;
+  text-decoration: none;
+
+  font-size: 15px;
+  color:grey !important;
+}
+.active{
+   color: black;
+}
+.customer-modal{
+  width: 100% !important;
+  height: 100% !important;
+  z-index: 99;
+  opacity: 0.5;
+  top:0;
+  left: 0;
+  position:fixed;
+  background: linear-gradient(135deg, #131414, #230f23);
+}
+.customer-dailog{
+  margin: 5rem auto;
+  width:40rem;
+  z-index: 9099 !important;
+  /* position:absolute; */
+  opacity: 1 !important ;
+
+}
+.balance-form label{
+  font-size: 14px;
+  color: #464E5F;
+}
+.balance-form input::placeholder,.balance-form select{
+  font-size: 13px;
+  color: #464E5F;
+}
+.balance-form .col{
+  margin: 10px !important;
+}
+.balance-add{
+  display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 10px 12px;
+
+/* position: static; */
+width: 256px;
+height: 38px;
+left: 50px !important;
+top: 6px;
+
+/* Investo/Temp/Green */
+
+background: #49CB67 !important;
+border-radius: 4px;
+color: white !important;
+/* Inside auto layout */
+
+flex: none;
+order: 1;
+align-self: stretch;
+flex-grow: 1;
+margin: 10px auto;
+}
+.color-change-box{
+  /* float: right; */
+  width: 20rem;
+  height: 13rem;
+  position:absolute;
+  z-index: 999 !important;
+  top: 10rem;
+  right: 0;
+  background-color: white;
+  border-radius: 5px;
+  border: 1px solid black !important;
+}
+.box {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  margin: 5px;
+  border: 1px solid rgba(0, 0, 0, .2);
+}
+
+.blue {
+  background: #13b4ff;
+}
+
+.purple {
+  background: #ab3fdd;
+}
+
+.wine {
+  background: #ae163e;
 }
