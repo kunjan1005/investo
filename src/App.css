@@ -149,6 +149,7 @@ a {
 .navbar,
 .navbar > .container {
   width: 100%;
+  /* position: fixed; */
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -161,9 +162,15 @@ a {
   .navbar,
   .navbar > .container {
     display: block;
+    width: 80% !important;
   }
 }
-
+@media (min-width: 2000px) {
+  .navbar{
+    margin-left: -123px !important;
+    width: 1421px !important;
+  }
+}
 .navbar {
   box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
   background-color: #fff;
@@ -394,6 +401,7 @@ a {
 }
 .stock-list {
   margin-top: 2rem;
+  padding: 1rem;
 }
 .row {
     margin-left: 0 !important;
@@ -428,6 +436,7 @@ a {
   position: absolute;
   width: 40px;
   height: 40px;
+    margin-left: 20rem;
   /* right: 12px; */
   padding: 8px 15px;
   font-style: normal;
@@ -504,6 +513,44 @@ a {
   top: 2rem;
   background: #ffffff;
   border-radius: 10px;
+}
+.sub-main-chart-header{
+  padding: 2rem;
+}
+.dh-1,.dh-2,.dh-3{
+  margin:10px;
+}
+.dh-1 h5{
+   font-size: 18px;
+   color:#212121BF;
+}
+.dh-2 h5,.dh-3 h5{
+  color:#212121BF;
+  font-size: 12px !important;
+}
+.dh-2 h6,.dh-3 h6{
+  color:#212121BF;
+  font-size: 12px;
+}
+.sub-chart-filter-btns{
+  float: right;
+  /* width: 15rem; */
+  /* padding: 0px !important; */
+  /* border: 1px solid black; */
+  margin-left:500px !important;
+}
+.sub-chart-filter-btns p{
+  font-size: 16px;
+  color: grey;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 400;
+  text-align: center;
+}
+.sub-chart-filter-btns button{
+  color: grey;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 600;
+  font-size: 15px;
 }
 .main-stocks-container {
   /* position: absolute; */
