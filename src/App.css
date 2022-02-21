@@ -687,3 +687,16 @@ margin: 10px auto;
 .wine {
   background: #ae163e;
 }
+.main-error-page{
+  padding:10rem 23rem;
+}
+.main-error-page img{
+  width:20rem;
+  height: 8em;
+}
+.main-error-page p a{
+  color: #19222a;
+}
+.main-error-page .error{
+  text-align: center;
+}
