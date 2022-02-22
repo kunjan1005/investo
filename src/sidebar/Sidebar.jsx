@@ -3,6 +3,13 @@ import { useState } from "react";
 import Scrollbars from "react-custom-scrollbars-2";
 import { NavLink } from "react-router-dom";
 import logo from "../images/logos/black.svg";
+import market from "../images/logos/market.png"
+import home from '../images/logos/Vectorhome.png'
+import customer from "../images/logos/Vectorcustomer.png"
+import account from "../images/logos/Vectoraccount.svg"
+import addOrder from "../images/logos/VectoraddOrder.png"
+import orderList from '../images/logos/VectororderList.png'
+import orderhistory from '../images/logos/Vectororderhistory.png'
 const Sidebar = () => {
   let [dropDown, showDropDown] = useState(0);
   return (
@@ -22,12 +29,12 @@ const Sidebar = () => {
                   {dropDown === 1 ? <ul className="sub-nav">
                     <li>
                       <NavLink to='/'>
-                        Dashboard
+                        <img className='' src={home} />Dashboard
                       </NavLink>
                     </li>
                     <li>
                       <NavLink to='/market'>
-                        Market
+                        <img className='' src={market} />Market
                       </NavLink>
                     </li>
 
@@ -41,12 +48,12 @@ const Sidebar = () => {
                   {dropDown === 2 ? <ul className="sub-nav">
                     <li>
                       <NavLink to='/customer'>
-                        Customer List
+                        <img className='' src={customer} />Customer List
                       </NavLink>
                     </li>
                     <li>
                       <NavLink to='/customer/account'>
-                        Account
+                        <img className='' src={account} />Account
                       </NavLink>
                     </li>
 
@@ -60,17 +67,17 @@ const Sidebar = () => {
                   {dropDown === 3 ? <ul className="sub-nav">
                     <li>
                       <NavLink to='/trading/order'>
-                        Add order
+                        <img className='' src={addOrder} /> Add order
                       </NavLink>
                     </li>
                     <li>
                       <NavLink to='/trading'>
-                        Order list
+                        <img className='' src={orderList} /> Order list
                       </NavLink>
                     </li>
                     <li>
                       <NavLink to='/trading/history'>
-                        Trading history
+                        <img className='' src={orderhistory} /> Trading history
                       </NavLink>
                     </li>
 

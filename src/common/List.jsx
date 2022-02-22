@@ -3,12 +3,12 @@ import logo from "../images/logos/black.svg";
 const List = () => {
   return (
     <>
-      <div className="common-profile d-flex justify-content-around">
+      <div className="common-profile d-flex">
         <div className="common-image">
           <img src={logo} alt="common image" />
         </div>
         <div className="common-title">
-          <h5 className="">Apu</h5> 
+          <h5 className="">Apu</h5>
           <p>XyZXY</p>
         </div>
         <div >

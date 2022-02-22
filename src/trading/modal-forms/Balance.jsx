@@ -20,32 +20,44 @@ const Balance = (props) => {
                     <div className="row">
                         <div className="col">
                             <div>
-                                <label>Name</label>
+                                <label>Customer name</label>
                                 <input type="text" className="form-control" placeholder="Search" />
                             </div>
                             <div>
-                                <label>Customer-type</label>
+                                <label>E-Mail</label>
+                                <input type="text" className="form-control" placeholder="E-Mail" />
+                            </div>
+                            <div>
+                                <label>Balance</label>
+                                <input type="text" className="form-control" placeholder="Balance" />
+                            </div>
+                            <div>
+                                <label>Securities</label>
                                 <select className='form-control'>
-                                    <option>select customer-type</option>
+                                    <option>Choose..</option>
                                 </select>
                             </div>
                             <div>
-                                <label>Email</label>
-                                <input type="text" className="form-control" placeholder="Email" />
+                                <label>Quantity</label>
+                                <input type="text" className="form-control" placeholder="Search" />
                             </div>
                             <div>
-                                <label>Whether to participate in foreign and domestic trade</label>
+                                <label>Price</label>
+                                <input type="text" className="form-control" placeholder="Price" />
+                            </div>
+                            <div>
+                                <label>Order type</label>
                                 <select className='form-control'>
-                                    <option>Select Domestic</option>
+                                    <option>Choose..</option>
                                 </select>
+
                             </div>
                             <div>
-                                <label>Domestic trading fee</label>
-                                <input type="text" className="form-control" placeholder="eg 1.5%" />
-                            </div>
-                            <div>
-                                <label>Company Bond trading fee</label>
-                                <input type="text" className="form-control" placeholder="eg 1%" />
+                                <label>Conditions for fulfillment</label>
+                                <select className='form-control'>
+                                    <option>Choose..</option>
+                                </select>
+
                             </div>
                         </div>
 
@@ -55,33 +67,39 @@ const Balance = (props) => {
                                 <input type="text" className="form-control" placeholder="National iD" />
                             </div>
                             <div>
-                                <label>Phone number</label>
-                                <input type="text" className="form-control" placeholder="Phone number" />
+                                <label>Account number</label>
+                                <input type="text" className="form-control" placeholder="Account number" />
                             </div>
                             <div>
-                                <label>Registration payment method</label>
-                                <select className='form-control'>
-                                    <option>Select Payment method</option>
-                                </select>
+                                <label>Possible balance</label>
+                                <input type="text" className="form-control" placeholder="Possible balance" />
                             </div>
                             <div>
-                                <label>Foreign trading contract</label>
-                                <select className='form-control'>
-                                    <option>Select trading contact</option>
-                                </select>
+                                <label>Available securities</label>
+                                <input type="text" className="form-control" placeholder="Available securities" />
                             </div>
                             <div>
-                                <label>Government Bond trading fee</label>
-                                <input type="text" className="form-control" placeholder="eg 1%" />
+                                <label>Fee</label>
+                                <input type="text" className="form-control" placeholder="Fee" />
                             </div>
                             <div >
-                                <label>Content</label>
-                                <input className="form-control"  type='file' s/>
+                                <label>Overall trade value</label>
+                                <input className="form-control" type='text' placeholder='Overall trade value' />
+                            </div>
+                            <div >
+                                <label>Date</label>
+                                <input className="form-control" type='date' placeholder='Date' />
+                            </div>
+                            <div >
+                                <label>Order form</label>
+                                <select className='form-control'>
+                                    <option>Choose..</option>
+                                </select>
                             </div>
                         </div>
                         <div className='mt-3'>
-                            <button className='btn btn-default balance-add' 
-                           >Add</button>
+                            <button className='btn btn-default balance-add'
+                            >Add</button>
                         </div>
                     </div>
                 </form>
