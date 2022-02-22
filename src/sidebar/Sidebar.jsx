@@ -3,8 +3,15 @@ import { useState } from "react";
 import Scrollbars from "react-custom-scrollbars-2";
 import { NavLink } from "react-router-dom";
 import logo from "../images/logos/black.svg";
+import market from "../images/logos/market.png"
+import home from '../images/logos/Vectorhome.png'
+import customer from "../images/logos/Vectorcustomer.png"
+import account from "../images/logos/Vectoraccount.svg"
+import addOrder from "../images/logos/VectoraddOrder.png"
+import orderList from '../images/logos/VectororderList.png'
+import orderhistory from '../images/logos/Vectororderhistory.png'
 const Sidebar = () => {
-  let [dropDown,showDropDown]=useState(0);
+  let [dropDown, showDropDown] = useState(0);
   return (
     <>
       <section className="app col-lg-2">
@@ -16,155 +23,98 @@ const Sidebar = () => {
             <Scrollbars>
               <ul>
                 <li>
-                  <NavLink to='#' onClick={()=>dropDown==0?showDropDown(1):showDropDown(0)}>
-                    <i className="ion-bag"></i> <span>MAIN MENU</span>
+                  <NavLink to='#' onClick={() => dropDown == 0 ? showDropDown(1) : showDropDown(0)}>
+                    <span>MAIN MENU</span>
                   </NavLink>
-                  {dropDown===1?<ul className="sub-nav">
+                  {dropDown === 1 ? <ul className="sub-nav">
                     <li>
                       <NavLink to='/'>
-                        <i className="ion-ios-color-filter-outline"></i>Dashboard
+                        <img className='' src={home} />Dashboard
                       </NavLink>
                     </li>
                     <li>
-                    <NavLink to='/market'>
-                        <i className="ion-ios-clock-outline"></i>Market
+                      <NavLink to='/market'>
+                        <img className='' src={market} />Market
                       </NavLink>
                     </li>
-                   
-                  </ul>:null}
+
+                  </ul> : null}
                 </li>
                 <li>
-                  <NavLink to='#'  onClick={()=>dropDown==0?showDropDown(2):showDropDown(0)}>
-                    <i className="ion-ios-settings"></i>{" "}
+                  <NavLink to='#' onClick={() => dropDown == 0 ? showDropDown(2) : showDropDown(0)}>
+
                     <span className="">CUSTOMERS</span>
                   </NavLink>
-                  {dropDown===2?<ul className="sub-nav">
+                  {dropDown === 2 ? <ul className="sub-nav">
                     <li>
                       <NavLink to='/customer'>
-                        <i className="ion-ios-color-filter-outline"></i>Customer List
+                        <img className='' src={customer} />Customer List
                       </NavLink>
                     </li>
                     <li>
-                    <NavLink to='/customer/account'>
-                        <i className="ion-ios-clock-outline"></i>Account
-                        </NavLink>
+                      <NavLink to='/customer/account'>
+                        <img className='' src={account} />Account
+                      </NavLink>
                     </li>
-                   
-                  </ul>:null}
+
+                  </ul> : null}
                 </li>
                 <li>
-                  <a herf='#'>
-                    <i className="ion-ios-briefcase-outline"></i>{" "}
-                    <span className="">TRADING</span>
-                  </a>
-                  {/* <ul className="nav-flyout">
+                  <NavLink to='#' onClick={() => dropDown == 0 ? showDropDown(3) : showDropDown(0)}>
+
+                    <span className="">Trading</span>
+                  </NavLink>
+                  {dropDown === 3 ? <ul className="sub-nav">
                     <li>
-                      <a href="#">
-                        <i className="ion-ios-flame-outline"></i>Burn
-                      </a>
+                      <NavLink to='/trading/order'>
+                        <img className='' src={addOrder} /> Add order
+                      </NavLink>
                     </li>
                     <li>
-                      <a href="#">
-                        <i className="ion-ios-lightbulb-outline"></i>Bulbs
-                      </a>
+                      <NavLink to='/trading'>
+                        <img className='' src={orderList} /> Order list
+                      </NavLink>
                     </li>
                     <li>
-                      <a href="#">
-                        <i className="ion-ios-location-outline"></i>Where You
-                      </a>
+                      <NavLink to='/trading/history'>
+                        <img className='' src={orderhistory} /> Trading history
+                      </NavLink>
                     </li>
-                    <li>
-                      <a href="#">
-                        <i className="ion-ios-locked-outline"></i>On Lock
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#">
-                        <i className="ion-ios-navigate-outline"></i>Ghostface
-                      </a>
-                    </li>
-                  </ul> */}
+
+                  </ul> : null}
+
                 </li>
                 <li>
-                  <a herf='#'>
-                    <i className="ion-ios-analytics-outline"></i>{" "}
+                  <NavLink to='#'>
+
                     <span className="">WITHDRAW</span>
-                  </a>
-                  {/* <ul className="nav-flyout">
-                    <li>
-                      <a href="#">
-                        <i className="ion-ios-timer-outline"></i>Timers
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#">
-                        <i className="ion-arrow-graph-down-left"></i>You Lose
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#">
-                        <i className="ion-ios-partlysunny-outline"></i>Stormy
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#">
-                        <i className="ion-ios-timer-outline"></i>Lookie Look
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#">
-                        <i className="ion-ios-game-controller-a-outline"></i>
-                        Dork Mfer
-                      </a>
-                    </li>
-                  </ul> */}
+                  </NavLink>
+
                 </li>
                 <li>
-                  <a herf='#'>
-                    <i className="ion-ios-paper-outline"></i>{" "}
+                  <NavLink to='#'>
+
                     <span className="">REPORT</span>
-                  </a>
-                  {/* <ul className="nav-flyout">
-                    <li>
-                      <a href="#">
-                        <i className="ion-ios-filing-outline"></i>File Cab
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#">
-                        <i className="ion-ios-information-outline"></i>Infos
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#">
-                        <i className="ion-ios-paperplane-outline"></i>Planes
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#">
-                        <i className="ion-android-star-outline"></i>Shop
-                      </a>
-                    </li>
-                  </ul> */}
+                  </NavLink>
+
                 </li>
                 <li>
-                  <a herf='#'>
-                    <i className="ion-ios-navigate-outline"></i>{" "}
+                  <NavLink to='#'>
+
                     <span className="">IPO</span>
-                  </a>
-               
+                  </NavLink>
+
                 </li>
                 <li>
-                  <a herf='#'>
-                    <i className="ion-ios-medical-outline"></i>{" "}
+                  <NavLink to='#'>
                     <span className="">CONTENT</span>
-                  </a>
+                  </NavLink>
                 </li>
               </ul>
             </Scrollbars>
           </nav>
         </aside>
-      </section>
+      </section >
     </>
   );
 };

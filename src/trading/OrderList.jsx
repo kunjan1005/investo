@@ -1,19 +1,19 @@
-import React,{useState} from 'react';
+import React, { useState } from 'react';
 import Scrollbars from 'react-custom-scrollbars-2';
-import SubNav from '../navbar/SubNav';
-import CustomerDataTable from './DataTable'
-import AddCustomer from './modal-forms/AddCustomer';
-const MainCustomerPage=()=>{
-  const [lgShow, setLgShow] = useState(false);
+import SubNav from '.././navbar/SubNav';
+import OrderDataTable from './DataTable'
+import Balance from './modal-forms/Balance';
+const OrderList=()=>{
+    let [showBalance,setShowBalance]=useState(false)
     return(<>
-    <AddCustomer setShow={setLgShow} show={lgShow}/>    
+    <Balance setShow={setShowBalance} show={showBalance}/>
       <SubNav 
       navigator={[{title:"Customer",link:'/customer'},{title:"List",link:'/customer/list'}]} 
-      button={[{title:"Add Customer",'className':"",onModalClick:setLgShow,show:lgShow}]}
+      button={[{title:"Statement",'className':""},
+      {title:"Balance",'className':"",onModalClick:setShowBalance,show:showBalance}]}
       toggle='modal'
       target='#myModal'
       />
-      
       <div className='container-fluid p-5'>
               
         <div className='row customer-main-container'>
@@ -21,10 +21,10 @@ const MainCustomerPage=()=>{
                 <button className='btn btn-default customer-filter'>more filter</button>
             </div>
             <Scrollbars>
-          <CustomerDataTable/>
+          <OrderDataTable/>
           </Scrollbars>
         </div>
       </div>
     </>)
 }
-export default MainCustomerPage
+export default OrderList
