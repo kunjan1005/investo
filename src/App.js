@@ -1,15 +1,17 @@
-import logo from './logo.svg';
+
+import { Route, Routes } from 'react-router-dom';
 import './App.css';
+import Constant from './components/Constant';
 import Login from './components/Login';
-import Sidebar from './sidebar/Sidebar';
-import Topnav from './navbar/Topnav';
+
 
 function App() {
+
   return (
-    <div className='row g-0'>
-        <Sidebar/>
-        <Topnav/>
-    </div>
+    <Routes>
+      <Route path='/login' element={<Login />} />
+      <Route path='/*' element={<Constant />} />
+    </Routes>
   );
 }
 

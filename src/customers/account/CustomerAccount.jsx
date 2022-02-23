@@ -17,7 +17,7 @@ const CustomerAccount = () => {
       toggle='modal'
       target='#myModal'
     />
-    <div className='container-fluid p-5'>
+    <div className='container-fluid py-3'>
 
       <div className='row customer-main-container'>
         <div className='row '>

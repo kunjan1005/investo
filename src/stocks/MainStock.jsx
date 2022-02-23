@@ -7,7 +7,7 @@ const MainStocks = () => {
             <h6 className='p-3'>Top Stocks</h6>
             <TopStocks />
         </div>
-        <div className='col-lg-1'></div>
+        <div className='col-lg-2'></div>
     </>)
 }
 export default MainStocks
