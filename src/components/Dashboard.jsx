@@ -15,7 +15,7 @@ const Dashboard=()=>{
       <AddCustomer/>
       <div className='' >
         <MainChart/>
-        <div className='row justify-content-center'style={{marginTop:'5rem'}}>
+        <div className='row'style={{marginTop:'3rem'}}>
           <MainStocks/>
           <MainCustomer/>
         </div>
