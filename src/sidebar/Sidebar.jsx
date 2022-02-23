@@ -11,6 +11,7 @@ import addOrder from "../images/logos/VectoraddOrder.png"
 import orderList from '../images/logos/VectororderList.png'
 import orderhistory from '../images/logos/Vectororderhistory.png'
 const Sidebar = (props) => {
+  // alert(props.show)
   let [dropDown, showDropDown] = useState(0);
   return (
     <>
@@ -18,7 +19,7 @@ const Sidebar = (props) => {
         <aside className="sidebar">
           <header className="header-title d-flex  justify-content-between">
             <img src={logo} />
-            <NavLink to="#" onClick={()=>props.setShow(false)}><p className="close">x</p></NavLink> 
+            <p className="close" onClick={() => props.setShow(false)}>x</p>
           </header>
           <nav className="sidebar-nav">
             <Scrollbars>

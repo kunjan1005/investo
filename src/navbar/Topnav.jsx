@@ -16,8 +16,8 @@ const Topnav = (props) => {
         <nav className="navbar">
           <div class="container">
             <div className="navbar-header col-lg-4">
-              <button onClick={()=>props.setSidebar(true)}>testing</button>
-              <button className="navbar-toggler" data-toggle="open-navbar1">
+              {/* <button onClick={() => props.setSidebar(true)}></button> */}
+              <button className="navbar-toggler" data-toggle="open-navbar1" onClick={() => props.setSidebar(true)}>
                 <span></span>
                 <span></span>
                 <span></span>
