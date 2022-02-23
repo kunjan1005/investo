@@ -33,7 +33,11 @@ a:hover {
   margin-left: -10px !important;
   /* position: fixed; */
 }
-
+.main-login-container{
+  height: 100vh;
+  overflow: hidden !important;
+  /* border: 1px solid black; */
+}
 /* -------------
 Sidebar
 ----------------*/
