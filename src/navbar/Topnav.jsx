@@ -6,16 +6,17 @@ import Body from "../components/Body";
 import SubNav from "./SubNav";
 // import '../custom/topnav'
 // import Button from '@mui/material/Button'
-const Topnav = () => {
+const Topnav = (props) => {
   let [show, setShow] = useState(false);
   let [showProfile, setShowProfile] = useState(false);
 
   return (
     <>
-      <div className="col-lg-10">
+      <div className="col-lg-10 nav_bar">
         <nav className="navbar">
           <div class="container">
             <div className="navbar-header col-lg-4">
+              <button onClick={()=>props.setSidebar(true)}>testing</button>
               <button className="navbar-toggler" data-toggle="open-navbar1">
                 <span></span>
                 <span></span>

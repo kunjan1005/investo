@@ -10,14 +10,15 @@ import account from "../images/logos/Vectoraccount.svg"
 import addOrder from "../images/logos/VectoraddOrder.png"
 import orderList from '../images/logos/VectororderList.png'
 import orderhistory from '../images/logos/Vectororderhistory.png'
-const Sidebar = () => {
+const Sidebar = (props) => {
   let [dropDown, showDropDown] = useState(0);
   return (
     <>
       <section className="app col-lg-2">
         <aside className="sidebar">
-          <header className="header-title">
+          <header className="header-title d-flex  justify-content-between">
             <img src={logo} />
+            <NavLink to="#" onClick={()=>props.setShow(false)}><p className="close">x</p></NavLink> 
           </header>
           <nav className="sidebar-nav">
             <Scrollbars>
