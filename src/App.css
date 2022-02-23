@@ -158,13 +158,6 @@ a {
   margin-left: 5px !important;
   overflow: hidden;
 }
-@media (max-width: 768px) {
-  .navbar,
-  .navbar > .container {
-    display: block;
-    width: 80% !important;
-  }
-}
 @media (min-width: 2000px) {
   .navbar{
     margin-left: -123px !important;
@@ -833,9 +826,83 @@ margin: 10px auto;
   padding-top: 40%;
   z-index: 1;
 }
-@media (max-width:767px) {
+@media (max-width: 768px) {
+  .navbar,
+  .navbar > .container {
+    display: block;
+    width: 80% !important;
+  }
+  .recharts-wrapper,
+  svg.recharts-surface {
+    width: 100% !important;
+  }
+  div>.sub-chart-filter-btns {
+    margin-left: 0 !important;
+  }
+  .container-md, .container-sm, .container,
+  .main-stocks-container,
+  .main-customer-container {
+    max-width: 540px !important;
+    margin-left: 28% !important;
+  }
+  .main-customer-container {
+    margin-top: 4rem !important;
+  }
+  .navbar, .navbar > .container {
+    width: 100% !important;
+  }
+  div>.navbar {
+    margin-left: 0px !important;
+  }
+  .navbar .navbar-header {
+    justify-content: unset !important;
+    flex-direction: unset !important;
+  }
+}
+@media (max-width:481px) {
   .bg-color {
     width: 100%;
     margin-top: 3rem;
+  }
+  .recharts-wrapper {
+    width: 100% !important;
+  }
+  svg.recharts-surface {
+    width: 100% !important;
+  }
+  div>.sub-chart-filter-btns {
+    margin-left: unset !important;
+  }
+  aside.sidebar {
+    display: none;
+  }
+  .common-count {
+    margin-left: 14rem;
+  }
+  .navbar, .navbar > .container {
+    width: 100% !important;
+  }
+  div>.navbar {
+    margin-left: 0px !important;
+  }
+  .navbar .navbar-header {
+    justify-content: unset;
+    flex-direction: unset;
+  }
+  .container-md, .container-sm, .container,
+  .main-stocks-container,
+  .main-customer-container {
+    margin-left: unset !important;
+  }
+}
+@media (max-width:320px) {
+  .sub-main-chart-header {
+    padding: unset !important;
+  }
+  .common-count {
+    margin-left: 10rem;
+  }
+  div>.sub-chart-filter-btns {
+    margin-left: -16px !important;
   }
 }
