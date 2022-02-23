@@ -1,7 +1,7 @@
 @charset "UTF-8";
-@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,300,600);
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&display=swap');
 body {
-  font-family: "Lato";
+  font-family: 'IBM Plex Sans', sans-serif;
   padding: 0px !important;
   /* font-size: 100%; */
   overflow-y: scroll;
@@ -157,13 +157,6 @@ a {
   /* position:absolute; */
   margin-left: 5px !important;
   overflow: hidden;
-}
-@media (max-width: 768px) {
-  .navbar,
-  .navbar > .container {
-    display: block;
-    width: 80% !important;
-  }
 }
 @media (min-width: 2000px) {
   .navbar{
@@ -746,4 +739,170 @@ margin: 10px auto;
 }
 .main-error-page .error{
   text-align: center;
+}
+/* login */
+.logo-investo {
+  margin: 5% auto;
+  display: block;
+  text-align: center;
+}
+.login-text {
+  font-family: IBM Plex Sans;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 28px;
+  line-height: 36px;
+  text-align: center;
+  letter-spacing: -0.02em;
+
+  color: #2F3044;
+}
+.email-id {
+  width: 380px;
+  height: 70px;
+
+  border: 0;
+  background: #EEF1F5;
+  border-radius: 12px;
+}
+.ml-5 {
+  margin-left: 3rem;
+}
+.mr-5 {
+  margin-right: 3rem;
+}
+.password {
+  width: 380px;
+  height: 70px;
+
+  border: 0;
+  background: #EEF1F5;
+  border-radius: 12px;
+}
+.forgot-pass {
+  font-family: IBM Plex Sans;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 18px;
+  text-align: right;
+
+  /* Investo/Temp/Green */
+  text-decoration: none;
+  color: #49CB67 !important;
+}
+.login-btn {
+  width: 109px;
+  height: 48px;
+  border: 0;
+  background: #464E5F !important;
+  color: #fff;
+  border-radius: 6px;
+}
+.bg-color {
+  width: 87%;
+  height: 100%;
+
+  background: linear-gradient(180deg, #000000 0%, #000000 100%);
+}
+.image-stack {
+  display: grid;
+  position: relative; 
+  grid-template-columns: repeat(12, 1fr);
+}
+
+.image-stack__item--bottom {
+  grid-column: 4 / -1;
+  grid-row: 1;
+  margin-top: 20%;
+}
+.imgs {
+  width: 100%;
+}
+
+.image-stack__item--top {
+  grid-row: 1;
+  grid-column: 1 / span 8;
+  padding-top: 40%;
+  z-index: 1;
+}
+@media (max-width: 768px) {
+  .navbar,
+  .navbar > .container {
+    display: block;
+    width: 80% !important;
+  }
+  .recharts-wrapper,
+  svg.recharts-surface {
+    width: 100% !important;
+  }
+  div>.sub-chart-filter-btns {
+    margin-left: 0 !important;
+  }
+  .container-md, .container-sm, .container,
+  .main-stocks-container,
+  .main-customer-container {
+    max-width: 540px !important;
+    margin-left: 28% !important;
+  }
+  .main-customer-container {
+    margin-top: 4rem !important;
+  }
+  .navbar, .navbar > .container {
+    width: 100% !important;
+  }
+  div>.navbar {
+    margin-left: 0px !important;
+  }
+  .navbar .navbar-header {
+    justify-content: unset !important;
+    flex-direction: unset !important;
+  }
+}
+@media (max-width:481px) {
+  .bg-color {
+    width: 100%;
+    margin-top: 3rem;
+  }
+  .recharts-wrapper {
+    width: 100% !important;
+  }
+  svg.recharts-surface {
+    width: 100% !important;
+  }
+  div>.sub-chart-filter-btns {
+    margin-left: unset !important;
+  }
+  aside.sidebar {
+    display: none;
+  }
+  .common-count {
+    margin-left: 14rem;
+  }
+  .navbar, .navbar > .container {
+    width: 100% !important;
+  }
+  div>.navbar {
+    margin-left: 0px !important;
+  }
+  .navbar .navbar-header {
+    justify-content: unset;
+    flex-direction: unset;
+  }
+  .container-md, .container-sm, .container,
+  .main-stocks-container,
+  .main-customer-container {
+    margin-left: unset !important;
+  }
+}
+@media (max-width:320px) {
+  .sub-main-chart-header {
+    padding: unset !important;
+  }
+  .common-count {
+    margin-left: 10rem;
+  }
+  div>.sub-chart-filter-btns {
+    margin-left: -16px !important;
+  }
 }
