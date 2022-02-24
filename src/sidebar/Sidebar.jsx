@@ -11,6 +11,7 @@ import addOrder from "../images/logos/VectoraddOrder.png"
 import orderList from '../images/logos/VectororderList.png'
 import orderhistory from '../images/logos/Vectororderhistory.png'
 const Sidebar = (props) => {
+  // alert(props.show)
   let [dropDown, showDropDown] = useState(0);
   return (
     <>
