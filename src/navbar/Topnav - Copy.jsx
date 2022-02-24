@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import logo from "../images/logos/Б.png";
+import logo from "../images/logos/black.svg";
 import NotificationDropDown from "../notification/NotificationDropDown";
 import ProfileDropDown from "../profile/ProfileDropDown";
 import Body from "../components/Body";
@@ -12,7 +12,7 @@ const Topnav = (props) => {
 
   return (
     <>
-      <div className="col-lg-9">
+      <div className="col-lg-10 nav_bar">
         <nav className="navbar">
           <div class="container">
             <div className="navbar-header col-lg-4">

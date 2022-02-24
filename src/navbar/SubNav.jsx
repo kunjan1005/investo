@@ -9,7 +9,7 @@ const SubNav = ({ navigator, button, toggle, target }) => {
           <div className="navbar-header col-lg-4">
             {navigator.map((each)=> <><span className="top-navigate-link" ><NavLink to={each.link} className="top-navigate-link">{each.title}</NavLink></span>
               <span className="horizonatal-line"> | </span></>)}
-
+              
           </div>
 
           <div className="navbar-menu col-lg-8" id="open-navbar1">

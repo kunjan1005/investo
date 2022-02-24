@@ -7,7 +7,7 @@ import MainStocks from '../stocks/MainStock';
 const Dashboard=()=>{
     return(<>
      <SubNav 
-      navigator={[{title:"Dashboard",link:'/'}]} 
+      navigator={[{title:"Main Menu",link:'/'},{title:"Dashboard",link:'/'}]} 
       // button={{title:"Add Customer",'className':""}}
       // // modal='data-bs-toggle="modal" data-bs-target="#exampleModal"'
    
@@ -16,8 +16,9 @@ const Dashboard=()=>{
       <div className='' >
         <MainChart/>
         <div className='row'style={{marginTop:'3rem'}}>
-          <MainStocks/>
-          <MainCustomer/>
+          
+          {/* <MainStocks/>
+          <MainCustomer/> */}
         </div>
       </div>
     </>)

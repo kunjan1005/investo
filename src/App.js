@@ -10,13 +10,13 @@ function App() {
   // const setSidebar=()=>{
     
   // }
-  window.addEventListener('resize',()=>{
-    if(window.innerWidth<=767){
-      setSidebar(false);
-    }
-  })
+  // window.addEventListener('resize',()=>{
+  //   if(window.innerWidth<=767){
+  //     setSidebar(false);
+  //   }
+  // })
   return (
-    <div className='row g-0'>
+    <div className='row'>
         {showSidebar?<Sidebar setShow={setSidebar} />:null}
         <Topnav  setSidebar={setSidebar}/>
     </div>

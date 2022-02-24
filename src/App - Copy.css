@@ -29,14 +29,18 @@ a:hover {
   color: white;
 }
 
-
+.app {
+  height: 100%;
+  margin-left: -10px !important;
+  /* position: fixed; */
+}
 
 /* -------------
 Sidebar
 ----------------*/
 .sidebar {
   position: fixed;
-  width: 25%;
+  width: 13em;
   /* border-radius: 0px 10px 10px 0px; */
   height: 100vh;
   top: 0;
@@ -100,19 +104,15 @@ Sidebar Nav
 .sidebar-nav ul li a {
   color: rgba(255, 255, 255, 0.9);
   font-size: 0.75em;
-  padding: 1.05em 0em;
+  padding: 1.05em 1em;
   position: relative;
   display: block;
 }
 .sidebar-nav ul li a:hover {
-
+  background-color: rgba(0, 0, 0, 0.9);
+  -webkit-transition: all 0.6s ease;
+  -moz-transition: all 0.6s ease;
   transition: all 0.6s ease;
-    background: #1B1B28;
-    border-radius: 4px;
-    flex: none;
-    order: 0;
-    align-self: stretch;
-    flex-grow: 0;
 }
 .sidebar-nav ul li i {
   font-size: 1.8em;
@@ -147,8 +147,16 @@ a {
   padding-right: 15px;
 }
 
-.navbar {
+.navbar,
+.navbar > .container {
   width: 100%;
+  /* position: fixed; */
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  /* position:absolute; */
+  margin-left: 5px !important;
   overflow: hidden;
 }
 @media (min-width: 2000px) {
@@ -158,9 +166,12 @@ a {
   }
 }
 .navbar {
-  box-shadow: 0 1px 2px 0 rgb(0 0 0 / 5%);
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
   background-color: #fff;
+  padding: 1rem 1.15rem;
   border-bottom: 1px solid #eceef3;
+  margin-left: -17px !important;
+  width: 1150px;
   /*
   |-----------------------------------
   | Start navbar logo or brand etc..
@@ -386,10 +397,10 @@ a {
   margin-top: 2rem;
   padding: 1rem;
 }
-/* .row {
+.row {
     margin-left: 0 !important;
     margin-right: 0px !important;
-} */
+}
 .notification-title h6,
 .common-title h5 {
   font-size: 13px;
@@ -416,7 +427,11 @@ a {
   color: #8950fc;
 }
 .common-count {
-
+  position: absolute;
+  width: 40px;
+  height: 40px;
+    margin-left: 20rem;
+  /* right: 12px; */
   padding: 8px 15px;
   font-style: normal;
   font-weight: bold;
@@ -446,6 +461,7 @@ a {
   color: #888c9f;
   border: 0px;
 }
+.profile-image,
 .common-image {
   margin-top: 0.1rem;
   border: 1px solid whitesmoke;
@@ -453,11 +469,6 @@ a {
   border-radius: 12%;
   height: 2.5rem;
   margin-left: -2px !important;
-}
-.profile-image {
-  background: #D7F9EF;
-  border-radius: 4px;
-  padding: 10px;
 }
 .profile-title,
 .common-title {
@@ -500,12 +511,8 @@ a {
 .sub-main-chart-header{
   padding: 2rem;
 }
-.dh-2,
-.dh-3{
-  margin-left: 30px;
-}
-.dh-1 {
-  margin-left: 20px;
+.dh-1,.dh-2,.dh-3{
+  margin:10px;
 }
 .dh-1 h5{
    font-size: 18px;
@@ -520,11 +527,11 @@ a {
   font-size: 12px;
 }
 .sub-chart-filter-btns{
-  /* float: right;
-  width: 15rem; 
-  padding: 0px !important;
-  border: 1px solid black;  */
-  margin-left:380px !important;
+  float: right;
+  /* width: 15rem; */
+  /* padding: 0px !important; */
+  /* border: 1px solid black; */
+  margin-left:500px !important;
 }
 .sub-chart-filter-btns p{
   font-size: 16px;
@@ -889,8 +896,7 @@ i.fas.fa-chevron-right {
   .common-count {
     margin-left: 14rem;
   }
-  .navbar, .navbar > .container,
-  .container.main-chart-contianer  {
+  .navbar, .navbar > .container {
     width: 100% !important;
   }
   div>.navbar {
@@ -937,83 +943,3 @@ i.fas.fa-chevron-right {
   }
 }
 
-/* sidebar ---------------------*/
-.menu {
-  font-style: normal;
-  font-weight: 500;
-  font-size: 12px;
-  line-height: 16px;
-  /* identical to box height */
-
-  display: flex;
-  align-items: center;
-  text-transform: uppercase;
-
-  color: #4A4B68;
-
-
-  /* Inside auto layout */
-
-  flex: none;
-  order: 1;
-  flex-grow: 1;
-  margin: 0px 4px;
-}
-.active>.submenu {
-  font-style: normal;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 21px;
-  /* identical to box height */
-
-  align-items: center;
-
-  color: #FFFFFF;
-
-
-  /* Inside auto layout */
-
-  flex: none;
-  order: 1;
-  flex-grow: 0;
-  margin: 0px 16px;
-}
-.submenu {
-  
-  font-style: normal;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 21px;
-  /* identical to box height */
-
-  align-items: center;
-  color: #888C9F;
-
-
-  /* Inside auto layout */
-  order: 1;
-  flex-grow: 0;
-  margin: 0px 16px;
-}
-.home,
-.submenu,
-.dollar,
-.customer,
-.account,
-.trandinghistory,
-.order-list,
-.order {
-  display: inline-block;
-  vertical-align: middle;
-}
-svg.recharts-surface {
-  width: 95% !important;
-  margin: auto;
-  display: block;
-}
-.recharts-wrapper {
-  width: 100% !important;
-}
-.container.main-chart-contianer {
-  width: 95%;
-}
