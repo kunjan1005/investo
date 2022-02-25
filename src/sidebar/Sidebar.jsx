@@ -27,8 +27,9 @@ import $ from 'jquery'
       $(this.nextSibling).css("display",'none')
       
       })
-    
-const Sidebar = (props) => {
+  
+const Sidebar = () => {
+
   return (
     <>
       <section className="app col-lg-3">

@@ -142,7 +142,7 @@ a {
 }
 @media screen and (max-width: 799px) {
   .sidebar {
-    display: none ;
+    /* display: none ; */
   }
 }
 
@@ -530,11 +530,7 @@ a {
   font-size: 12px;
 }
 .sub-chart-filter-btns {
-  /* float: right;
-  width: 15rem; 
-  padding: 0px !important;
-  border: 1px solid black;  */
-  margin-left: 250px !important;
+  margin-left: 325px !important;
 }
 .sub-chart-filter-btns p {
   font-size: 16px;
@@ -836,9 +832,9 @@ i.fas.fa-chevron-right {
   }
 }
 @media (max-width: 768px) {
-    nav.navbar {
+    /* nav.navbar {
       z-index: -1;
-  }
+  } */
   .customer-main-container {
     width: 97%;
     z-index: -1;
@@ -927,8 +923,12 @@ i.fas.fa-chevron-right {
     margin-left: 0px !important;
   }
   aside.sidebar {
-    z-index: 1;
+    /* z-index: 1; */
     /* display: none; */
+  }
+  .main-chart-contianer{
+    z-index: -1;
+
   }
   .main-error-page {
     padding: 10rem 0rem;
@@ -1110,6 +1110,7 @@ svg.recharts-surface {
   color: #fff !important;
   background: #585858;
   border-radius: 4px;
+  border: 0;
 
   font-style: normal;
   font-weight: 600;
@@ -1175,6 +1176,12 @@ color: #3699FF !important;
 }
 .add-btn {
   float: right;
+}
+.navbar-nav {
+  display: unset !important;
+}
+button.btn.btn-primary.add-btn {
+  margin-right: 10px;
 }
 @media (max-width:767px) {
   .top-customer {

@@ -5,15 +5,12 @@ import ProfileDropDown from "../profile/ProfileDropDown";
 import Body from "../components/Body";
 import SubNav from "./SubNav";
 import $ from 'jquery'
+import MenuIcon from '@mui/icons-material/Menu';
 // import '../custom/topnav'
 // import Button from '@mui/material/Button'
  
-const setSidebar=()=>{
 
-    return $('.sidbar').show()
-}
-
-const Topnav = () => {
+const Topnav = (props) => {
   let [show, setShow] = useState(false);
   let [showProfile, setShowProfile] = useState(false);
 
@@ -23,18 +20,12 @@ const Topnav = () => {
         <nav className="navbar">
           <div class="container">
             <div className="navbar-header col-lg-4 col-2">
-              {/* <button onClick={()=>props.setSidebar(true)}>testing</button> */}
-              <button className="navbar-toggler" data-toggle="open-sidebar"
-              onClick={() =>setSidebar()}>
-                <span></span>
-                <span></span>
-                <span></span>
-              </button>
+             <MenuIcon onClick={()=>props.isShow?props.show(false):props.show(true)}/>
 
             </div>
             {/* this is top navbar menu  */}
             <div className="navbar-menu col-lg-8">
-              <ul className="navbar-nav">
+              <ul className="navbar-nav d-flex">
                 <li className="navbar-dropdown">
                   <div className="search-input">
                     <input placeholder="Search" />
