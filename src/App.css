@@ -1107,6 +1107,7 @@ svg.recharts-surface {
   color: #fff !important;
   background: #585858;
   border-radius: 4px;
+  border: 0;
 
   font-style: normal;
   font-weight: 600;
@@ -1173,8 +1174,18 @@ color: #3699FF !important;
 .add-btn {
   float: right;
 }
+.navbar-nav {
+  display: unset !important;
+}
+button.btn.btn-primary.add-btn {
+  margin-right: 10px;
+}
 @media (max-width:767px) {
   .top-customer {
     margin-top: 2rem;
+  }
+  .mdb-datatable.dt-bootstrap4 {
+    width: 100%;
+    overflow: scroll;
   }
 }
