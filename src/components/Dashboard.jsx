@@ -34,7 +34,7 @@ const Dashboard = () => {
                 <div className='col-lg-2 col-2'>
                   <img src={logo} />
                 </div>
-                <div className="col-lg-3">
+                <div className="col-lg-3 col-3">
                   <p className='text-1 mb-0'>
                     Apu
                   </p>
@@ -55,7 +55,7 @@ const Dashboard = () => {
                 <div className='col-lg-2 col-2'>
                   <img src={Rectangle1} />
                 </div>
-                <div className="col-lg-3">
+                <div className="col-lg-3 col-3">
                   <p className='text-1 mb-0'>
                     Apu
                   </p>
@@ -76,7 +76,7 @@ const Dashboard = () => {
                 <div className='col-lg-2 col-2'>
                   <img src={Rectangle3} />
                 </div>
-                <div className="col-lg-3">
+                <div className="col-lg-3 col-3">
                   <p className='text-1 mb-0'>
                     Apu
                   </p>
@@ -97,7 +97,7 @@ const Dashboard = () => {
                 <div className='col-lg-2 col-2'>
                   <img src={Rectangle2} />
                 </div>
-                <div className="col-lg-3">
+                <div className="col-lg-3 col-3">
                   <p className='text-1 mb-0'>
                     Apu
                   </p>
@@ -118,7 +118,7 @@ const Dashboard = () => {
                 <div className='col-lg-2 col-2'>
                   <img src={Rectangle4} />
                 </div>
-                <div className="col-lg-3">
+                <div className="col-lg-3 col-3">
                   <p className='text-1 mb-0'>
                     Apu
                   </p>
@@ -151,7 +151,7 @@ const Dashboard = () => {
                     <div className='col-lg-2 col-2'>
                       <img src={customer} />
                     </div>
-                    <div className="col-lg-3">
+                    <div className="col-lg-3 col-3">
                         <p className='text-1 mb-0'>
                           Дорж
                         </p>
@@ -172,7 +172,7 @@ const Dashboard = () => {
                     <div className='col-lg-2 col-2'>
                       <img src={customer} />
                     </div>
-                    <div className="col-lg-3">
+                    <div className="col-lg-3 col-3">
                         <p className='text-1 mb-0'>
                           Бат
                         </p>
@@ -193,7 +193,7 @@ const Dashboard = () => {
                     <div className='col-lg-2 col-2'>
                       <img src={customer} />
                     </div>
-                    <div className="col-lg-3">
+                    <div className="col-lg-3 col-3">
                         <p className='text-1 mb-0'>
                           Ундрал
                         </p>
@@ -214,7 +214,7 @@ const Dashboard = () => {
                     <div className='col-lg-2 col-2'>
                       <img src={customer} />
                     </div>
-                    <div className="col-lg-3">
+                    <div className="col-lg-3 col-3">
                         <p className='text-1 mb-0'>
                           Сүх
                         </p>
@@ -235,7 +235,7 @@ const Dashboard = () => {
                     <div className='col-lg-2 col-2'>
                       <img src={customer} />
                     </div>
-                    <div className="col-lg-3">
+                    <div className="col-lg-3 col-3">
                         <p className='text-1 mb-0'>
                           Төмөр
                         </p>
