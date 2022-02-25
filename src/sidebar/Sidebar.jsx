@@ -15,28 +15,28 @@ const Sidebar = (props) => {
   let [dropDown, showDropDown] = useState(0);
   return (
     <>
-      <section className="app col-lg-2">
+      <section className="app col-lg-3">
         <aside className="sidebar">
           <header className="header-title d-flex  justify-content-between">
             <img src={logo} />
-            <p className="close" onClick={() => props.setShow(false)}>x</p>
+            {/* <NavLink to="#" onClick={()=>props.setShow(false)}><p className="close">x</p></NavLink>  */}
           </header>
           <nav className="sidebar-nav">
             <Scrollbars>
               <ul>
                 <li>
-                  <NavLink to='#' onClick={() => dropDown == 0 ? showDropDown(1) : showDropDown(0)}>
+                  <NavLink to='#' classsName="menu" onClick={() => dropDown == 0 ? showDropDown(1) : showDropDown(0)}>
                     <span>MAIN MENU</span>
                   </NavLink>
                   {dropDown === 1 ? <ul className="sub-nav">
                     <li>
                       <NavLink to='/'>
-                        <img className='' src={home} />Dashboard
+                        <img className='home' src={home} /> <span className="submenu">Dashboard</span>
                       </NavLink>
                     </li>
                     <li>
                       <NavLink to='/market'>
-                        <img className='' src={market} />Market
+                        <img className='dollar' src={market} /> <span className="submenu">Market</span>
                       </NavLink>
                     </li>
 
@@ -50,12 +50,12 @@ const Sidebar = (props) => {
                   {dropDown === 2 ? <ul className="sub-nav">
                     <li>
                       <NavLink to='/customer'>
-                        <img className='' src={customer} />Customer List
+                        <img className='customer' src={customer} /> <span className="submenu">Customer List</span>
                       </NavLink>
                     </li>
                     <li>
                       <NavLink to='/customer/account'>
-                        <img className='' src={account} />Account
+                        <img className='account' src={account} /> <span className="submenu">Account</span>
                       </NavLink>
                     </li>
 
@@ -69,17 +69,17 @@ const Sidebar = (props) => {
                   {dropDown === 3 ? <ul className="sub-nav">
                     <li>
                       <NavLink to='/trading/order'>
-                        <img className='' src={addOrder} /> Add order
+                        <img className='order' src={addOrder} /> <span className="submenu">Add order</span>
                       </NavLink>
                     </li>
                     <li>
                       <NavLink to='/trading'>
-                        <img className='' src={orderList} /> Order list
+                        <img className='order-list' src={orderList} /> <span className="submenu">Order list</span>
                       </NavLink>
                     </li>
                     <li>
                       <NavLink to='/trading/history'>
-                        <img className='' src={orderhistory} /> Trading history
+                        <img className='trandinghistory' src={orderhistory} /> <span className="submenu">Trading history</span>
                       </NavLink>
                     </li>
 
@@ -102,7 +102,7 @@ const Sidebar = (props) => {
                 </li>
                 <li>
                   <NavLink to='#'>
-
+                    
                     <span className="">IPO</span>
                   </NavLink>
 
