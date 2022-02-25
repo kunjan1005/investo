@@ -35,9 +35,7 @@ const Topnav = (props) => {
                 </li>
                 <li>
                   <a href="#">
-                    <span
-                      onClick={() => (show ? setShow(false) : setShow(true))}
-                    >
+                    <span onClick={() => (show ? setShow(false) : setShow(true))}>
                       <i className="fa-regular fa-bell"></i>
                       <span className="bedge">3</span>
                     </span>

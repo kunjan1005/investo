@@ -102,7 +102,7 @@ const Sidebar = (props) => {
                 </li>
                 <li>
                   <NavLink to='#'>
-
+                    
                     <span className="">IPO</span>
                   </NavLink>
 
