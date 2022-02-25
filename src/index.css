@@ -1,0 +1,15 @@
+@media (max-width: 768px) {
+     .dh-1 h5,.dh-1 h6{
+      font-size:12px !important;
+      width:100% !important;
+    }
+    .sub-chart-filter-btns p{
+        margin-bottom: 0px !important;
+    }
+    .sub-chart-filter-btns .btn-default{
+        padding:0px !important;
+        width:2rem !important;
+        margin-top:0px !important;
+        font-size: 10px !important;
+    }
+  }

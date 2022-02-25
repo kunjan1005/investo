@@ -14,7 +14,8 @@ export default function WithMultipleCheckboxes() {
 
   return (
     <>
-      <MDBDataTableV5
+    <MDBDataTableV5 hover entriesOptions={[5, 20, 25]} entries={5} pagesAmount={4} data={datatable} searchTop searchBottom={false} />
+      {/* <MDBDataTableV5
         hover
         entriesOptions={[5, 20, 25]}
         entries={5}
@@ -30,7 +31,7 @@ export default function WithMultipleCheckboxes() {
           showLogs2(e);
         }}
         multipleCheckboxes
-      />
+      /> */}
 
       {/* <Result>
         {' '}

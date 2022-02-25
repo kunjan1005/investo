@@ -17,12 +17,11 @@ const SubNav = ({ navigator, button, toggle, target }) => {
               <ul className="navbar-nav">
 
                 {button?.map(each => {
-                  return <div className="">
-                    {button != undefined ? <button className="btn btn-primary add-btn"
+                  return button != undefined ? <button className="btn btn-primary add-btn"
                       type="button"
                       onClick={() => each.onModalClick(true)}
-                    >{each.title}</button> : null}
-                  </div>
+                    >{each.title}</button> : null
+                 
                 })}
 
               </ul>
