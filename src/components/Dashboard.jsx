@@ -28,7 +28,7 @@ const Dashboard = () => {
             <h2 className='stock-text d-inline-block'>
               Top Stock
             </h2>
-            <i className="fa fa-arrow-right d-inline-block ml-5"></i>
+            <i className="fas fa-angle-right d-inline-block ml-5"></i>
             <div className='col-lg-12 col-12'>
               <div className='row mt-3'>
                 <div className='col-lg-2 col-2'>
@@ -145,7 +145,7 @@ const Dashboard = () => {
                 <h2 className='stock-text d-inline-block'>
                   Top customers
                 </h2>
-                <i className="fa fa-arrow-right d-inline-block ml-5"></i>
+                <i className="fas fa-angle-right d-inline-block ml-5"></i>
                 <div className='col-lg-12 col-12'>
                   <div className='row mt-3'>
                     <div className='col-lg-2 col-2'>

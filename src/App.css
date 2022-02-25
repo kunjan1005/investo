@@ -12,6 +12,9 @@ body {
   text-rendering: optimizeLegibility;
   background-color: #e5e5e5 !important;
 }
+*,button,link,div,p,li,ul,ol,a,h1,h2,h3,h4,h5,h6,svg,img,th,tr,td,table,input {
+  font-family: 'IBM Plex Sans', sans-serif;
+}
 .row{
   --bs-gutter-x: none !important;
 }
@@ -172,7 +175,7 @@ a {
   |-----------------------------------
   */
 }
-@media (min-width: 576px) {
+/* @media (min-width: 576px) {
   .navbar .container {
     max-width: 540px;
   }
@@ -191,11 +194,10 @@ a {
   .navbar .container {
     max-width: 1140px;
   }
-}
+} */
 .navbar .navbar-header {
   display: flex;
   align-items: center;
-  margin-left: 25px;
 }
 @media (max-width: 768px) {
   .navbar .navbar-header {
@@ -534,12 +536,12 @@ a {
   font-weight: 400;
   text-align: center;
 }
-.sub-chart-filter-btns button{
+/* .sub-chart-filter-btns button{
   color: grey;
   font-family: Arial, Helvetica, sans-serif;
   font-weight: 600;
   font-size: 15px;
-}
+} */
 .main-stocks-container {
   /* position: absolute; */
   /* width: 576.5px; */
@@ -580,23 +582,19 @@ a {
 }
 .customer-main-container {
   position: absolute;
-  width: 83%;
+  width: 72%;
   padding: 2rem;
-  height: 100%;
-  /* left: 293px; */
-  /* top: 145px; */
-
+  /* height: 100%; */
   background: #ffffff;
   border-radius: 8px;
+  margin-left: 25px !important;
 }
 .edit-icon-button {
-  width: 32px;
-  height: 32px;
   right: 30px;
   top: 382px;
   background: #f3f6f9;
   border-radius: 6px;
-  padding: 6px;
+  padding: 9px;
 }
 .customer-status {
   /* display: flex;
@@ -615,13 +613,7 @@ flex-direction: row; */
 .customer-filter {
 
   padding: 7px 13px;
-  
-  /* position: absolute; */
-  width: 8rem !important;
-  /* height: 33px; */
   float: right !important;
- 
-  
   background: #F3F6F9 !important;
   border-radius: 4px;
   color: #6993FF !important;
@@ -827,7 +819,8 @@ i.fas.fa-chevron-right {
 }
 @media (max-width:1024px) {
   .customer-main-container {
-    margin-left: 80px !important;
+    /* width: 65%; */
+    z-index: -1;
   }
   .sidebar {
     height: 113vh;
@@ -838,6 +831,13 @@ i.fas.fa-chevron-right {
   }
 }
 @media (max-width: 768px) {
+    nav.navbar {
+      z-index: -1;
+  }
+  .customer-main-container {
+    width: 97%;
+    z-index: -1;
+  }
   .navbar,
   .navbar > .container {
     display: block;
@@ -871,6 +871,9 @@ i.fas.fa-chevron-right {
   }
 }
 @media (max-width:481px) {
+  .sidebar {
+    width: 45%;
+  }
   .bg-color {
     width: 100%;
     margin-top: 3rem;
@@ -1071,6 +1074,17 @@ svg.recharts-surface {
   background: #49CB67;
   border-radius: 6px;
 }
+.days,.month_ {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 16px;
+  /* identical to box height */
+
+  border: 0;
+  color: #666666;
+  background: transparent;
+}
 .text {
   font-style: normal;
   font-weight: bold;
@@ -1080,7 +1094,79 @@ svg.recharts-surface {
 
   color: #FFFFFF;
 }
+.month {
+  width: 75px;
+  height: 32px;
 
+  color: #fff !important;
+  background: #585858;
+  border-radius: 4px;
+
+  font-style: normal;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 16px;
+}
+
+/* customer data table */
+th {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 16px;
+  align-items: center;
+  letter-spacing: 0.03em;
+  color: #B5B5C3;
+}
+td {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 30px;
+  color: #464E5F;
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+  margin: 0px 0px;
+}
+.date {
+  font-style: normal;
+font-weight: 600;
+font-size: 12px;
+line-height: 16px;
+display: flex;
+align-items: center;
+letter-spacing: 0.03em;
+
+color: #3699FF !important;
+
+}
+.created-date {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 18px;
+
+  color: #3699FF !important;
+
+
+  /* Inside auto layout */
+
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+  margin: 0px 0px;
+}
+.sub_menu {
+  width: 100%;
+  box-shadow: 0 1px 2px 0 rgb(0 0 0 / 5%);
+  background-color: #fff;
+  border-bottom: 1px solid #eceef3;
+  padding: 10px;
+}
+.add-btn {
+  float: right;
+}
 @media (max-width:767px) {
   .top-customer {
     margin-top: 2rem;;

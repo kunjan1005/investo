@@ -15,6 +15,11 @@ export const customers = {
       width: 270,
     },
     {
+      label: <th className="date">Created date</th>,
+      field: "date",
+      width: 200,      
+    },
+    {
       label: "Nation iD",
       field: "office",
       width: 200,
@@ -27,7 +32,7 @@ export const customers = {
     },
     {
       label: "Phone number",
-      field: "date",
+      field: "phone",
       sort: "disabled",
       width: 150,
     },
@@ -50,7 +55,7 @@ export const customers = {
       position: "System Architect",
       office: "Edinburgh",
       age: "61",
-      date: "2011/04/25",
+      date: <td className="created-date">2011/04/25</td>,
       status:(<span className="customer-status">Registred</span>),
       action: (
         <span className="">
@@ -63,7 +68,7 @@ export const customers = {
       position: "Accountant",
       office: "Tokyo",
       age: "63",
-      date: "2011/07/25",
+      date: <td className="created-date">2011/07/25</td>,
       status:(<span className="customer-status">Registred</span>),
       action: (
         <span className="">
@@ -76,7 +81,7 @@ export const customers = {
       position: "Junior Technical Author",
       office: "San Francisco",
       age: "66",
-      date: "2009/01/12",
+      date: <td className="created-date">2009/01/12</td>,
       status:(<span className="customer-status">Registred</span>),
       action: (
         <span className="">
