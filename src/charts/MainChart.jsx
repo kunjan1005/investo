@@ -20,10 +20,10 @@ const MainChart = () => {
           </div>
           </div>
           <div className='sub-chart-filter-btns'>
-            <p>See more</p>
-            <button className='btn btn-default'>7 Days</button>
-            <button className='btn btn-default'>1 Month</button>
-            <button className='btn btn-default'>3 Month</button>
+            <p className='mb-0'>See more <i className='fas fa-angle-right'></i></p>
+            <button className='days'>7 Days</button>
+            <button className='month'>1 Month</button>
+            <button className='month_'>3 Month</button>
           </div>
         </div>
       </div>
