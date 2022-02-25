@@ -10,9 +10,25 @@ import account from "../images/logos/Vectoraccount.svg"
 import addOrder from "../images/logos/VectoraddOrder.png"
 import orderList from '../images/logos/VectororderList.png'
 import orderhistory from '../images/logos/Vectororderhistory.png'
+import AccountBalanceWalletIcon from '@mui/icons-material/AccountBalanceWallet';
+import PeopleAltIcon from '@mui/icons-material/PeopleAlt';
+import PlaylistAddIcon from '@mui/icons-material/PlaylistAdd';
+import ListAltIcon from '@mui/icons-material/ListAlt';
+import HistoryIcon from '@mui/icons-material/History';
+import HomeIcon from '@mui/icons-material/Home';
+import AttachMoneyIcon from '@mui/icons-material/AttachMoney';
+import $ from 'jquery'
+
+    $(document).on('click','#menu',function(){
+   
+        // console.log()
+      $(this.nextSibling).css('display') =='none'?
+      $(this.nextSibling).css("display",'block'):
+      $(this.nextSibling).css("display",'none')
+      
+      })
+    
 const Sidebar = (props) => {
-  // alert(props.show)
-  let [dropDown, showDropDown] = useState(0);
   return (
     <>
       <section className="app col-lg-3">
@@ -25,65 +41,65 @@ const Sidebar = (props) => {
             <Scrollbars>
               <ul>
                 <li>
-                  <NavLink to='#' classsName="menu" onClick={() => dropDown == 0 ? showDropDown(1) : showDropDown(0)}>
+                  <NavLink to='#' classsName="menu" id='menu'>
                     <span>MAIN MENU</span>
                   </NavLink>
-                  {dropDown === 1 ? <ul className="sub-nav">
+                   <ul className="sub-nav">
                     <li>
                       <NavLink to='/'>
-                        <img className='home' src={home} /> <span className="submenu">Dashboard</span>
+                      <HomeIcon className='side-bar-icons'/><span className="submenu">Dashboard</span>
                       </NavLink>
                     </li>
                     <li>
                       <NavLink to='/market'>
-                        <img className='dollar' src={market} /> <span className="submenu">Market</span>
+                      <AttachMoneyIcon className='side-bar-icons'/><span className="submenu">Market</span>
                       </NavLink>
                     </li>
 
-                  </ul> : null}
+                  </ul> 
                 </li>
                 <li>
-                  <NavLink to='#' onClick={() => dropDown == 0 ? showDropDown(2) : showDropDown(0)}>
+                  <NavLink to='#' id='menu'>
 
                     <span className="">CUSTOMERS</span>
                   </NavLink>
-                  {dropDown === 2 ? <ul className="sub-nav">
+                   <ul className="sub-nav">
                     <li>
                       <NavLink to='/customer'>
-                        <img className='customer' src={customer} /> <span className="submenu">Customer List</span>
+                      <PeopleAltIcon className="side-bar-icons"/><span className="submenu">Customer List</span>
                       </NavLink>
                     </li>
                     <li>
                       <NavLink to='/customer/account'>
-                        <img className='account' src={account} /> <span className="submenu">Account</span>
+                      <AccountBalanceWalletIcon className="side-bar-icons"/><span className="submenu">Account</span>
                       </NavLink>
                     </li>
 
-                  </ul> : null}
+                  </ul> 
                 </li>
                 <li>
-                  <NavLink to='#' onClick={() => dropDown == 0 ? showDropDown(3) : showDropDown(0)}>
+                  <NavLink to='#' id='menu'>
 
-                    <span className="">Trading</span>
+                    <span className="">TRADING</span>
                   </NavLink>
-                  {dropDown === 3 ? <ul className="sub-nav">
+                  <ul className="sub-nav">
                     <li>
                       <NavLink to='/trading/order'>
-                        <img className='order' src={addOrder} /> <span className="submenu">Add order</span>
+                      <PlaylistAddIcon className='side-bar-icons'/><span className="submenu">Add order</span>
                       </NavLink>
                     </li>
                     <li>
                       <NavLink to='/trading'>
-                        <img className='order-list' src={orderList} /> <span className="submenu">Order list</span>
+                        <ListAltIcon className="side-bar-icons"/><span className="submenu">Order list</span>
                       </NavLink>
                     </li>
                     <li>
                       <NavLink to='/trading/history'>
-                        <img className='trandinghistory' src={orderhistory} /> <span className="submenu">Trading history</span>
+                        <HistoryIcon className="side-bar-icons"/> <span className="submenu">Trading history</span>
                       </NavLink>
                     </li>
 
-                  </ul> : null}
+                  </ul> 
 
                 </li>
                 <li>

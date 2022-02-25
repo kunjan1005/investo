@@ -4,9 +4,16 @@ import NotificationDropDown from "../notification/NotificationDropDown";
 import ProfileDropDown from "../profile/ProfileDropDown";
 import Body from "../components/Body";
 import SubNav from "./SubNav";
+import $ from 'jquery'
 // import '../custom/topnav'
 // import Button from '@mui/material/Button'
-const Topnav = (props) => {
+ 
+const setSidebar=()=>{
+
+    return $('.sidbar').show()
+}
+
+const Topnav = () => {
   let [show, setShow] = useState(false);
   let [showProfile, setShowProfile] = useState(false);
 
@@ -15,9 +22,10 @@ const Topnav = (props) => {
       <div className="col-lg-9">
         <nav className="navbar">
           <div class="container">
-            <div className="navbar-header col-lg-4">
+            <div className="navbar-header col-lg-4 col-2">
               {/* <button onClick={()=>props.setSidebar(true)}>testing</button> */}
-              <button className="navbar-toggler" data-toggle="open-navbar1">
+              <button className="navbar-toggler" data-toggle="open-sidebar"
+              onClick={() =>setSidebar()}>
                 <span></span>
                 <span></span>
                 <span></span>
@@ -25,12 +33,12 @@ const Topnav = (props) => {
 
             </div>
 
-            <div className="navbar-menu col-lg-8" id="open-navbar1">
+            <div className="navbar-menu col-lg-8">
               <ul className="navbar-nav">
                 <li className="navbar-dropdown">
                   <div className="search-input">
                     <input placeholder="Search" />
-                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <i className="fa-solid fa-magnifying-glass"></i>
                   </div>
                 </li>
                 <li>
