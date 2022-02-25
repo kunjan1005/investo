@@ -11,14 +11,13 @@ import OrderList from '../trading/OrderList';
 const Routing = () => {
     return (<>
         <Routes>
-            <Route excat path='/login' element={<Login/>} />
-            <Route excat path='/signup' element={<Singup />} />
-            
-            <Route excat path='/' element={<Dashboard />} />
-            <Route activeClass='active' excat path='/customer' element={<MainCustomerPage />} />
-            <Route excat path='/customer/account' element={<CustomerAccount />} />
-            <Route excat path='/trading' element={<OrderList />} />
-            <Route excat path='*' element={<PageNotFound />} />
+            <Route exact path='/login' element={<Login/>} />
+            <Route exact path='/signup' element={<Singup />} />
+            <Route exact  activeClass='active' path='/' element={<Dashboard />} />
+            <Route exact activeClass='active' path='/customer' element={<MainCustomerPage />} />
+            <Route exact activeClass='active' path='/customer/account' element={<CustomerAccount />} />
+            <Route exact activeClass='active' path='/trading' element={<OrderList />} />
+            <Route path='*' element={<PageNotFound />} />
 
         </Routes>
     </>)
