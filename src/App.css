@@ -140,11 +140,11 @@ Sidebar Nav
 a {
   text-decoration: none;
 }
-@media screen and (max-width: 799px) {
+/* @media screen and (max-width: 799px) {
   .sidebar {
-    /* display: none ; */
+    display: none ;
   }
-}
+} */
 
 .container {
   /* width: 1170px; */
@@ -922,10 +922,10 @@ i.fas.fa-chevron-right {
   .customer-main-container {
     margin-left: 0px !important;
   }
-  aside.sidebar {
-    /* z-index: 1; */
-    /* display: none; */
-  }
+  /* aside.sidebar {
+    z-index: 1;
+    display: none;
+  } */
   .main-chart-contianer{
     z-index: -1;
 
