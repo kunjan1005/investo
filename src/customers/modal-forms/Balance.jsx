@@ -21,62 +21,62 @@ const Balance = (props) => {
                         <div className="col">
                             <div>
                                 <label>Name</label>
-                                <input type="text" className="form-control" placeholder="Search" />
+                                <input type="text" className="form-control_" placeholder="Search" />
                             </div>
-                            <div>
+                            <div className='common'>
                                 <label>Customer-type</label>
-                                <select className='form-control'>
+                                <select className='form-control_'>
                                     <option>select customer-type</option>
                                 </select>
                             </div>
-                            <div>
+                            <div className='common'>
                                 <label>Email</label>
-                                <input type="text" className="form-control" placeholder="Email" />
+                                <input type="text" className="form-control_" placeholder="Email" />
                             </div>
-                            <div>
+                            <div className='common'>
                                 <label>Whether to participate in foreign and domestic trade</label>
-                                <select className='form-control'>
+                                <select className='form-control_'>
                                     <option>Select Domestic</option>
                                 </select>
                             </div>
-                            <div>
+                            <div className='common'>
                                 <label>Domestic trading fee</label>
-                                <input type="text" className="form-control" placeholder="eg 1.5%" />
+                                <input type="text" className="form-control_" placeholder="eg 1.5%" />
                             </div>
-                            <div>
+                            <div className='common'>
                                 <label>Company Bond trading fee</label>
-                                <input type="text" className="form-control" placeholder="eg 1%" />
+                                <input type="text" className="form-control_" placeholder="eg 1%" />
                             </div>
                         </div>
 
                         <div className="col">
                             <div>
                                 <label>National iD</label>
-                                <input type="text" className="form-control" placeholder="National iD" />
+                                <input type="text" className="form-control_" placeholder="National iD" />
                             </div>
-                            <div>
+                            <div className='common'>
                                 <label>Phone number</label>
-                                <input type="text" className="form-control" placeholder="Phone number" />
+                                <input type="text" className="form-control_" placeholder="Phone number" />
                             </div>
-                            <div>
+                            <div className='common'>
                                 <label>Registration payment method</label>
-                                <select className='form-control'>
+                                <select className='form-control_'>
                                     <option>Select Payment method</option>
                                 </select>
                             </div>
-                            <div>
+                            <div className='common'>
                                 <label>Foreign trading contract</label>
-                                <select className='form-control'>
+                                <select className='form-control_'>
                                     <option>Select trading contact</option>
                                 </select>
                             </div>
-                            <div>
+                            <div className='common'>
                                 <label>Government Bond trading fee</label>
-                                <input type="text" className="form-control" placeholder="eg 1%" />
+                                <input type="text" className="form-control_" placeholder="eg 1%" />
                             </div>
-                            <div >
+                            <div className='common'>
                                 <label>Content</label>
-                                <input className="form-control"  type='file' s/>
+                                <input className="form-control_"  type='file' />
                             </div>
                         </div>
                         <div className='mt-3'>

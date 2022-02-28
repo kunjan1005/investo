@@ -1,6 +1,6 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-import Logo from '../images/logos/Vector.png';
+import Logo from '../images/logos/black.svg';
 import img19 from '../images/logos/image-19.png';
 import img4 from '../images/logos/image-4.png';
 const Login = () => {

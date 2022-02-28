@@ -57,7 +57,8 @@ const Sidebar = (props) => {
                   <ul className="sub-nav">
                     <li>
                       <NavLink to='/'>
-                        <HomeIcon className='side-bar-icons' /><span className="submenu">Dashboard</span>
+                        <HomeIcon className='side-bar-icons' />
+                        <span className="submenu">Dashboard</span>
                       </NavLink>
                     </li>
                     <li>
