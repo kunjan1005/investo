@@ -1,15 +1,49 @@
-@media (max-width: 768px) {
-     .dh-1 h5,.dh-1 h6{
-      font-size:12px !important;
-      width:100% !important;
-    }
-    .sub-chart-filter-btns p{
-        margin-bottom: 0px !important;
-    }
-    .sub-chart-filter-btns .btn-default{
-        padding:0px !important;
-        width:2rem !important;
-        margin-top:0px !important;
-        font-size: 10px !important;
-    }
-  }
+.notification-icon,
+.fa-magnifying-glass {
+  color: #49cb67;
+}
+.status-registred {
+  color: #8950fc;
+  background: #eee5ff;
+}
+.status-verifying,.status-open{
+  color: #ffa800;
+  background: #fff4de;
+}
+.status-verified,.status-filled {
+  color: #1bc5bd;
+  background: #c9f7f5;
+}
+.status-delete,.status-canccelled{
+  color: #f64e60;
+  background: #ffe2e5;
+}
+.page-item {
+  display: none !important;
+}
+.top-customer-tab{
+  margin-left: 60px !important;
+}
+.top-customer-tab h6 {
+  position: static;
+  width: 100px;
+  height: 18px;
+  left: 0px;
+  top: 0px;
+  display: flex;
+  text-align: center;
+  font-family: IBM Plex Sans;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 21px;
+  margin: 8px 0px;
+  align-items: center;
+  color: #49cb67;
+}
+.fa-magnifying-glass{
+  margin:11px !important ;
+}
+.fa-pen-to-square{
+  color:#3699FF;
+}

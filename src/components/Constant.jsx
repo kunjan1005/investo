@@ -18,7 +18,7 @@ function Constant() {
 
     return (
         <div className='row g-0'>
-             {show?<Sidebar />:null} 
+             {show?<Sidebar isShow={show} show={setShow}/>:null} 
             <Topnav isShow={show} show={setShow}/>
         </div>
     );

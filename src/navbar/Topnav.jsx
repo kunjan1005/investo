@@ -12,31 +12,34 @@ import MenuIcon from '@mui/icons-material/Menu';
 
 const Topnav = (props) => {
   let [show, setShow] = useState(false);
+  let [showSearch,setSearchInput]=useState(false);
   let [showProfile, setShowProfile] = useState(false);
-
   return (
     <>
       <div className="col-lg-9">
         <nav className="navbar">
           <div class="container">
             <div className="navbar-header col-lg-4 col-2">
-             <MenuIcon onClick={()=>props.isShow?props.show(false):props.show(true)}/>
+            {!props.isShow?<MenuIcon onClick={()=>props.isShow?props.show(false):props.show(true)}/>:null} 
 
             </div>
             {/* this is top navbar menu  */}
             <div className="navbar-menu col-lg-8">
               <ul className="navbar-nav d-flex">
-                <li className="navbar-dropdown">
-                  <div className="search-input">
-                    <input placeholder="Search" />
-                    <i className="fa-solid fa-magnifying-glass"></i>
-                  </div>
+                <li className="navbar-dropdown mr-2">
+                  {showSearch?<div className="search-input">
+                    <input placeholder="Search"  />
+                  </div>:null}
+                  
                 </li>
+                   
+                <li className=""><i className="fa-solid fa-magnifying-glass"onClick={
+                  ()=>showSearch?setSearchInput(false):setSearchInput(true)}></i></li>
                 <li>
                   <a href="#">
                     <span onClick={() => (show ? setShow(false) : setShow(true))}>
-                      <i className="fa-regular fa-bell"></i>
-                      <span className="bedge">3</span>
+                      <i className="fa-regular fa-bell notification-icon"></i>
+                      {/* <span className="bedge">3</span> */}
                     </span>
                     {show ? <NotificationDropDown /> : null}
                   </a>
@@ -44,7 +47,7 @@ const Topnav = (props) => {
 
                 <li className="d-flex">
                   <a href="#" className="profile-title">
-                    admin
+                  Batkhuleg
                   </a>
                   <span
                     onClick={() => (showProfile ? setShowProfile(false) : setShowProfile(true))}

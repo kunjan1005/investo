@@ -18,17 +18,26 @@ import HistoryIcon from '@mui/icons-material/History';
 import HomeIcon from '@mui/icons-material/Home';
 import AttachMoneyIcon from '@mui/icons-material/AttachMoney';
 import $ from 'jquery'
+$(document).ready(function () {
+  $(document).on('click', '#menu', function () {
+    $(this.nextSibling).css('display') == 'none' ?
+      $(this.nextSibling).css("display", 'block') :
+      $(this.nextSibling).css("display", 'none')
+  })
+  let currentpath = window.location.pathname;
+  let tabindex = currentpath.split('/')[1]
+  console.log(tabindex)
+  if (tabindex === '' || tabindex === 'market') {
+    $('ul').children()[0].firstChild.nextSibling.style.display = "block"
+  }
+  else if (tabindex === 'customer') {
+    $('ul').children()[1].firstChild.nextSibling.style.display = "block"
+  } else if (tabindex === 'trading') {
+    $('ul').children()[2].firstChild.nextSibling.style.display = "block"
+  }
+})
 
-    $(document).on('click','#menu',function(){
-   
-        // console.log()
-      $(this.nextSibling).css('display') =='none'?
-      $(this.nextSibling).css("display",'block'):
-      $(this.nextSibling).css("display",'none')
-      
-      })
-  
-const Sidebar = () => {
+const Sidebar = (props) => {
 
   return (
     <>
@@ -36,7 +45,7 @@ const Sidebar = () => {
         <aside className="sidebar">
           <header className="header-title d-flex  justify-content-between">
             <img src={logo} />
-            {/* <NavLink to="#" onClick={()=>props.setShow(false)}><p className="close">x</p></NavLink>  */}
+           {!props.isShow?<NavLink to="#" onClick={()=>props.show(false)}><p className="close">x</p></NavLink>:null }
           </header>
           <nav className="sidebar-nav">
             <Scrollbars>
@@ -45,38 +54,38 @@ const Sidebar = () => {
                   <NavLink to='#' classsName="menu" id='menu'>
                     <span>MAIN MENU</span>
                   </NavLink>
-                   <ul className="sub-nav">
+                  <ul className="sub-nav">
                     <li>
                       <NavLink to='/'>
-                      <HomeIcon className='side-bar-icons'/><span className="submenu">Dashboard</span>
+                        <HomeIcon className='side-bar-icons' /><span className="submenu">Dashboard</span>
                       </NavLink>
                     </li>
                     <li>
                       <NavLink to='/market'>
-                      <AttachMoneyIcon className='side-bar-icons'/><span className="submenu">Market</span>
+                        <AttachMoneyIcon className='side-bar-icons' /><span className="submenu">Market</span>
                       </NavLink>
                     </li>
 
-                  </ul> 
+                  </ul>
                 </li>
                 <li>
                   <NavLink to='#' id='menu'>
 
                     <span className="">CUSTOMERS</span>
                   </NavLink>
-                   <ul className="sub-nav">
+                  <ul className="sub-nav">
                     <li>
                       <NavLink to='/customer'>
-                      <PeopleAltIcon className="side-bar-icons"/><span className="submenu">Customer List</span>
+                        <PeopleAltIcon className="side-bar-icons" /><span className="submenu">Customer List</span>
                       </NavLink>
                     </li>
                     <li>
                       <NavLink to='/customer/account'>
-                      <AccountBalanceWalletIcon className="side-bar-icons"/><span className="submenu">Account</span>
+                        <AccountBalanceWalletIcon className="side-bar-icons" /><span className="submenu">Account</span>
                       </NavLink>
                     </li>
 
-                  </ul> 
+                  </ul>
                 </li>
                 <li>
                   <NavLink to='#' id='menu'>
@@ -86,21 +95,21 @@ const Sidebar = () => {
                   <ul className="sub-nav">
                     <li>
                       <NavLink to='/trading/order'>
-                      <PlaylistAddIcon className='side-bar-icons'/><span className="submenu">Add order</span>
+                        <PlaylistAddIcon className='side-bar-icons' /><span className="submenu">Add order</span>
                       </NavLink>
                     </li>
                     <li>
                       <NavLink to='/trading'>
-                        <ListAltIcon className="side-bar-icons"/><span className="submenu">Order list</span>
+                        <ListAltIcon className="side-bar-icons" /><span className="submenu">Order list</span>
                       </NavLink>
                     </li>
                     <li>
                       <NavLink to='/trading/history'>
-                        <HistoryIcon className="side-bar-icons"/> <span className="submenu">Trading history</span>
+                        <HistoryIcon className="side-bar-icons" /> <span className="submenu">Trading history</span>
                       </NavLink>
                     </li>
 
-                  </ul> 
+                  </ul>
 
                 </li>
                 <li>
@@ -119,7 +128,7 @@ const Sidebar = () => {
                 </li>
                 <li>
                   <NavLink to='#'>
-                    
+
                     <span className="">IPO</span>
                   </NavLink>
 

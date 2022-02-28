@@ -9,7 +9,7 @@ const CustomerAccount = () => {
     <Balance setShow={setShowBalance} show={showBalance} />
     <SubNav
       navigator={[
-        { title: "Customers", link: '/customer' },
+        { title: "Customer", link: '/customer' },
         { title: "Account-ATT", link: '/customer' },
       ]}
       button={[{ title: "Account Statement", 'className': "" },
