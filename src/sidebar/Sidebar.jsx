@@ -3,87 +3,107 @@ import { useState } from "react";
 import Scrollbars from "react-custom-scrollbars-2";
 import { NavLink } from "react-router-dom";
 import logo from "../images/logos/black.svg";
-import market from "../images/logos/market.png"
-import home from '../images/logos/Vectorhome.png'
-import customer from "../images/logos/Vectorcustomer.png"
-import account from "../images/logos/Vectoraccount.svg"
-import addOrder from "../images/logos/VectoraddOrder.png"
-import orderList from '../images/logos/VectororderList.png'
-import orderhistory from '../images/logos/Vectororderhistory.png'
+import AccountBalanceWalletOutlinedIcon from '@mui/icons-material/AccountBalanceWalletOutlined';
+import PeopleAltOutlinedIcon from '@mui/icons-material/PeopleAltOutlined';
+import PlaylistAddIcon from '@mui/icons-material/PlaylistAdd';
+import ListAltIcon from '@mui/icons-material/ListAlt';
+import HistoryIcon from '@mui/icons-material/History';
+import HomeOutlinedIcon from '@mui/icons-material/HomeOutlined';
+import AttachMoneyIcon from '@mui/icons-material/AttachMoney';
+import {sidebarLang} from '../content/language'
+import $ from 'jquery'
+$(document).ready(function () {
+  $(document).on('click', '#menu', function () {
+    $(this.nextSibling).css('display') == 'none' ?
+      $(this.nextSibling).css("display", 'block') :
+      $(this.nextSibling).css("display", 'none')
+  })
+  let currentpath = window.location.pathname;
+  let tabindex = currentpath.split('/')[1]
+  console.log(tabindex)
+  if (tabindex === '' || tabindex === 'market') {
+    $('ul').children()[0].firstChild.nextSibling.style.display = "block"
+  }
+  else if (tabindex === 'customer') {
+    $('ul').children()[1].firstChild.nextSibling.style.display = "block"
+  } else if (tabindex === 'trading') {
+    $('ul').children()[2].firstChild.nextSibling.style.display = "block"
+  }
+})
+
 const Sidebar = (props) => {
-  // alert(props.show)
-  let [dropDown, showDropDown] = useState(0);
+
   return (
     <>
-      <section className="app col-lg-2">
+      <section className="app col-lg-3">
         <aside className="sidebar">
           <header className="header-title d-flex  justify-content-between">
             <img src={logo} />
-            <p className="close" onClick={() => props.setShow(false)}>x</p>
+           {!props.isShow?<NavLink to="#" onClick={()=>props.show(false)}><p className="close">x</p></NavLink>:null }
           </header>
           <nav className="sidebar-nav">
             <Scrollbars>
               <ul>
                 <li>
-                  <NavLink to='#' onClick={() => dropDown == 0 ? showDropDown(1) : showDropDown(0)}>
+                  <NavLink to='#' classsName="menu" id='menu'>
                     <span>MAIN MENU</span>
                   </NavLink>
-                  {dropDown === 1 ? <ul className="sub-nav">
+                  <ul className="sub-nav">
                     <li>
                       <NavLink to='/'>
-                        <img className='' src={home} />Dashboard
+                        <HomeOutlinedIcon className='side-bar-icons' /><span className="submenu">Dashboard</span>
                       </NavLink>
                     </li>
                     <li>
                       <NavLink to='/market'>
-                        <img className='' src={market} />Market
+                        <AttachMoneyIcon className='side-bar-icons' /><span className="submenu">Market</span>
                       </NavLink>
                     </li>
 
-                  </ul> : null}
+                  </ul>
                 </li>
                 <li>
-                  <NavLink to='#' onClick={() => dropDown == 0 ? showDropDown(2) : showDropDown(0)}>
+                  <NavLink to='#' id='menu'>
 
                     <span className="">CUSTOMERS</span>
                   </NavLink>
-                  {dropDown === 2 ? <ul className="sub-nav">
+                  <ul className="sub-nav">
                     <li>
                       <NavLink to='/customer'>
-                        <img className='' src={customer} />Customer List
+                        <PeopleAltOutlinedIcon className="side-bar-icons" /><span className="submenu">Customer List</span>
                       </NavLink>
                     </li>
                     <li>
                       <NavLink to='/customer/account'>
-                        <img className='' src={account} />Account
+                        <AccountBalanceWalletOutlinedIcon className="side-bar-icons" /><span className="submenu">Account</span>
                       </NavLink>
                     </li>
 
-                  </ul> : null}
+                  </ul>
                 </li>
                 <li>
-                  <NavLink to='#' onClick={() => dropDown == 0 ? showDropDown(3) : showDropDown(0)}>
+                  <NavLink to='#' id='menu'>
 
-                    <span className="">Trading</span>
+                    <span className="">TRADING</span>
                   </NavLink>
-                  {dropDown === 3 ? <ul className="sub-nav">
+                  <ul className="sub-nav">
                     <li>
                       <NavLink to='/trading/order'>
-                        <img className='' src={addOrder} /> Add order
+                        <PlaylistAddIcon className='side-bar-icons' /><span className="submenu">Add order</span>
                       </NavLink>
                     </li>
                     <li>
                       <NavLink to='/trading'>
-                        <img className='' src={orderList} /> Order list
+                        <ListAltIcon className="side-bar-icons" /><span className="submenu">Order list</span>
                       </NavLink>
                     </li>
                     <li>
                       <NavLink to='/trading/history'>
-                        <img className='' src={orderhistory} /> Trading history
+                        <HistoryIcon className="side-bar-icons" /> <span className="submenu">Trading history</span>
                       </NavLink>
                     </li>
 
-                  </ul> : null}
+                  </ul>
 
                 </li>
                 <li>

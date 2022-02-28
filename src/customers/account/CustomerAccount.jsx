@@ -9,7 +9,7 @@ const CustomerAccount = () => {
     <Balance setShow={setShowBalance} show={showBalance} />
     <SubNav
       navigator={[
-        { title: "Customers", link: '/customer' },
+        { title: "Customer", link: '/customer' },
         { title: "Account-ATT", link: '/customer' },
       ]}
       button={[{ title: "Account Statement", 'className': "" },
@@ -17,15 +17,15 @@ const CustomerAccount = () => {
       toggle='modal'
       target='#myModal'
     />
-    <div className='container-fluid py-3'>
+    <div className='py-3'>
 
       <div className='row customer-main-container'>
-        <div className='row '>
-          <button className='btn btn-default customer-filter'>more filter</button>
+        <div className=''>
+          <button className='btn btn-default customer-filter'>More filter</button>
         </div>
-        <Scrollbars>
-          <CustomerDataTable />
-        </Scrollbars>
+        {/* <Scrollbars> */}
+        <CustomerDataTable />
+        {/* </Scrollbars> */}
       </div>
     </div>
   </>)
