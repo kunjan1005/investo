@@ -3,20 +3,14 @@ import { useState } from "react";
 import Scrollbars from "react-custom-scrollbars-2";
 import { NavLink } from "react-router-dom";
 import logo from "../images/logos/black.svg";
-import market from "../images/logos/market.png"
-import home from '../images/logos/Vectorhome.png'
-import customer from "../images/logos/Vectorcustomer.png"
-import account from "../images/logos/Vectoraccount.svg"
-import addOrder from "../images/logos/VectoraddOrder.png"
-import orderList from '../images/logos/VectororderList.png'
-import orderhistory from '../images/logos/Vectororderhistory.png'
-import AccountBalanceWalletIcon from '@mui/icons-material/AccountBalanceWallet';
-import PeopleAltIcon from '@mui/icons-material/PeopleAlt';
+import AccountBalanceWalletOutlinedIcon from '@mui/icons-material/AccountBalanceWalletOutlined';
+import PeopleAltOutlinedIcon from '@mui/icons-material/PeopleAltOutlined';
 import PlaylistAddIcon from '@mui/icons-material/PlaylistAdd';
 import ListAltIcon from '@mui/icons-material/ListAlt';
 import HistoryIcon from '@mui/icons-material/History';
-import HomeIcon from '@mui/icons-material/Home';
+import HomeOutlinedIcon from '@mui/icons-material/HomeOutlined';
 import AttachMoneyIcon from '@mui/icons-material/AttachMoney';
+import {sidebarLang} from '../content/language'
 import $ from 'jquery'
 $(document).ready(function () {
   $(document).on('click', '#menu', function () {
@@ -57,7 +51,7 @@ const Sidebar = (props) => {
                   <ul className="sub-nav">
                     <li>
                       <NavLink to='/'>
-                        <HomeIcon className='side-bar-icons' /><span className="submenu">Dashboard</span>
+                        <HomeOutlinedIcon className='side-bar-icons' /><span className="submenu">Dashboard</span>
                       </NavLink>
                     </li>
                     <li>
@@ -76,12 +70,12 @@ const Sidebar = (props) => {
                   <ul className="sub-nav">
                     <li>
                       <NavLink to='/customer'>
-                        <PeopleAltIcon className="side-bar-icons" /><span className="submenu">Customer List</span>
+                        <PeopleAltOutlinedIcon className="side-bar-icons" /><span className="submenu">Customer List</span>
                       </NavLink>
                     </li>
                     <li>
                       <NavLink to='/customer/account'>
-                        <AccountBalanceWalletIcon className="side-bar-icons" /><span className="submenu">Account</span>
+                        <AccountBalanceWalletOutlinedIcon className="side-bar-icons" /><span className="submenu">Account</span>
                       </NavLink>
                     </li>
 

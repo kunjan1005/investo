@@ -47,3 +47,24 @@
 .fa-pen-to-square{
   color:#3699FF;
 }
+.profile-language-dropDown{
+  z-index: 999;
+  opacity: 1;
+  position: fixed;
+  width: 150px;
+  /* height: 250px; */
+  right: 10px;
+  top: 210px;
+  background: #ffffff;
+  box-shadow: 2px 2px 15px grey;
+  border-radius: 10px;
+}
+.profile-language-dropDown li{
+  cursor: pointer;
+}
+.profile-dropdown-container-1 {
+  padding:"24px"
+}
+.profile-dropdown-container-1 img{
+  height:2rem;
+}
