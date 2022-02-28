@@ -3,7 +3,7 @@ import logo from "../images/logos/black.svg";
 const List = () => {
   return (
     <>
-      <div className="common-profile d-flex">
+      {/* <div className="common-profile d-flex">
         <div className="common-image">
           <img src={logo} alt="common image" />
         </div>
@@ -14,7 +14,7 @@ const List = () => {
         <div >
           <span className="common-count">1</span>
         </div>
-      </div>
+      </div> */}
     </>
   );
 };

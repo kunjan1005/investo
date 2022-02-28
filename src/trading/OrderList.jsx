@@ -14,17 +14,17 @@ const OrderList=()=>{
       toggle='modal'
       target='#myModal'
       />
-      <div className='container-fluid py-3 mt-3'>
+           <div className='py-3'>
               
-        <div className='row customer-main-container'>
-            <div className='row '>
-                <button className='btn btn-default customer-filter'>more filter</button>
+              <div className='row customer-main-container'>
+                  <div className=''>
+                      <button className='btn btn-default customer-filter'>More filter</button>
+                  </div>
+                  {/* <Scrollbars> */}
+                <OrderDataTable/>
+                {/* </Scrollbars> */}
+              </div>
             </div>
-            <Scrollbars>
-          <OrderDataTable/>
-          </Scrollbars>
-        </div>
-      </div>
     </>)
 }
 export default OrderList

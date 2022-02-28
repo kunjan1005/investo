@@ -3,14 +3,15 @@ import { Route, Routes } from 'react-router-dom';
 import './App.css';
 import Constant from './components/Constant';
 import Login from './components/Login';
+import React,{useState} from 'react';
 
 
 function App() {
-
+ 
   return (
     <Routes>
-      <Route path='/login' element={<Login />} />
-      <Route path='/*' element={<Constant />} />
+    <Route exact path='/login' element={<Login/>} />
+    <Route exact path='/*' element={<Constant />} />
     </Routes>
   );
 }
