@@ -22,8 +22,8 @@ const Areachart = () => {
 
   return (
     <AreaChart width={1100} height={300} data={data} className=''>
-      <Area dataKey="students" fill="green" stroke="green" />
-      <CartesianGrid stroke="#ccc" />
+      <Area dataKey="students" fill="green" stroke={false} />
+       
       <XAxis dataKey="name" />
       <YAxis />
     </AreaChart>

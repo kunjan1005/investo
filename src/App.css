@@ -10,7 +10,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
-  background-color: #e5e5e5 !important;
+  background-color: #E5E5E5 !important;
 }
 *,button,link,div,p,li,ul,ol,a,h1,h2,h3,h4,h5,h6,svg,img,th,tr,td,table,input {
   font-family: 'IBM Plex Sans', sans-serif;
@@ -599,17 +599,10 @@ a {
   padding: 9px;
 }
 .customer-status {
-  /* display: flex;
-flex-direction: row; */
   align-items: flex-start;
   padding: 6px 12px;
-
-  /* position: absolute; */
   width: 89px;
   height: 26px;
-
-  color: #8950fc;
-  background: #eee5ff;
   border-radius: 4px;
 }
 .customer-filter {
