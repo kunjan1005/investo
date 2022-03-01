@@ -12,10 +12,10 @@ body {
   text-rendering: optimizeLegibility;
   background-color: #E5E5E5 !important;
 }
-*,button,link,div,p,li,ul,ol,a,h1,h2,h3,h4,h5,h6,svg,img,th,tr,td,table,input {
+*,select,section,option,button,link,div,p,li,ul,ol,a,h1,h2,h3,h4,h5,h6,svg,img,th,tr,td,table,tbody,thead,input {
   font-family: 'IBM Plex Sans', sans-serif;
 }
-.row{
+.row {
   --bs-gutter-x: none !important;
 }
 a {
@@ -140,11 +140,11 @@ Sidebar Nav
 a {
   text-decoration: none;
 }
-@media screen and (max-width: 799px) {
+/* @media screen and (max-width: 799px) {
   .sidebar {
-    /* display: none ; */
+    display: none ;
   }
-}
+} */
 
 .container {
   /* width: 1170px; */
@@ -243,9 +243,7 @@ a {
   flex-basis: auto;
   flex-grow: 1;
 }
-.false {
-  margin-top: -37px;
-}
+
 @media (max-width: 1000px) {
   .navbar .navbar-menu {
     display: none;
@@ -530,7 +528,7 @@ a {
   font-size: 12px;
 }
 .sub-chart-filter-btns {
-  margin-left: 325px !important;
+  margin-left: 375px !important;
 }
 .sub-chart-filter-btns p {
   font-size: 16px;
@@ -613,7 +611,7 @@ a {
   color: #6993ff !important;
 }
 .top-navigate-link {
-  margin: 5px;
+  margin: 5px 8px;
   text-decoration: none;
 
   font-size: 15px;
@@ -652,33 +650,14 @@ a {
   margin: 10px !important;
 }
 .balance-add {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  padding: 10px 12px;
-
-  /* position: static; */
   width: 256px;
   height: 38px;
-  left: 50px !important;
-  top: 6px;
-
-  /* Investo/Temp/Green */
-
+  border: 0;
   background: #49cb67 !important;
   border-radius: 4px;
   color: white !important;
-  /* Inside auto layout */
-
-  flex: none;
-  order: 1;
-  align-self: stretch;
-  flex-grow: 1;
-  margin: 10px auto;
 }
 .color-change-box {
-  /* float: right; */
   width: 20rem;
   height: 13rem;
   position: absolute;
@@ -688,6 +667,11 @@ a {
   background-color: white;
   border-radius: 5px;
   border: 1px solid black !important;
+}
+.btn-group {
+  width: 42%;
+  margin: auto;
+  display: block !important;
 }
 .box {
   display: inline-block;
@@ -915,10 +899,10 @@ i.fas.fa-chevron-right {
   .customer-main-container {
     margin-left: 0px !important;
   }
-  aside.sidebar {
-    /* z-index: 1; */
-    /* display: none; */
-  }
+  /* aside.sidebar {
+    z-index: 1;
+    display: none;
+  } */
   .main-chart-contianer{
     z-index: -1;
 
@@ -932,6 +916,12 @@ i.fas.fa-chevron-right {
   border: 1px solid #fff;
   padding: 5px;
   cursor: pointer;
+}
+path.recharts-curve.recharts-area-area {
+  fill: #c6ffc6;
+  stroke: #49cb67;
+  stroke-width: 3px;
+  stroke-linejoin: round;
 }
 @media (max-width: 320px) {
   .sub-main-chart-header {
@@ -1054,8 +1044,9 @@ svg.recharts-surface {
   font-style: normal;
   font-weight: 500;
   font-size: 14px;
-  line-height: 18px;
 
+  line-height: 18px;
+  
   color: #000000;
 }
 .text-2 {
@@ -1176,6 +1167,129 @@ color: #3699FF !important;
 button.btn.btn-primary.add-btn {
   margin-right: 10px;
 }
+.activities {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 18px;
+  align-items: center;
+
+  /* Investo/Core/Background/Dark/backgroundPrimary */
+
+  color: #000000;
+
+
+  /* Inside auto layout */
+
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+  margin: 8px 20px;
+}
+.trading-volume {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 21px;
+  /* identical to box height */
+
+  align-items: center;
+  text-decoration: underline;
+  color: #49CB67;
+
+
+  /* Inside auto layout */
+
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+  margin: 8px 0px;
+}
+.form-control_ {
+  width: 100%;
+  height: 36px;
+  background: #FFFFFF;
+  border-radius: 4px;
+  flex: none;
+  order: 2;
+  align-self: stretch;
+  flex-grow: 0;
+  margin: 8px 0px;
+  border: 1px solid #ccc;
+}
+.form-control1 {
+  width: 100%;
+  height: 36px;
+  left: 0px;
+  right: 0px;
+  top: 24px;
+
+  /* Investo/Light/Background/Tertiary */
+
+  background: #EEEEEE;
+  border-radius: 4px;
+
+  /* Inside auto layout */
+
+  flex: none;
+  order: 2;
+  align-self: stretch;
+  flex-grow: 0;
+  border: 1px solid #ccc;
+  margin: 8px 0px;
+}
+.common {
+  margin-top: 1rem;
+}
+.common_ {
+  margin-top: 25px;
+}
+/* .balance-add {
+  margin: auto;
+  display: block !important;
+} */
+.upload_btn {
+  width: 86px;
+  height: 36px;
+  left: 279px;
+  top: 0px;
+  background: #212121;
+  border-radius: 4px;
+  border: 0;
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+  margin: 0px 16px;
+  color: #fff;
+}
+.upload-input {
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 8px;
+  position: static;
+  width: 72%;
+  height: 36px;
+  
+  border: 1px solid #ccc;
+  background: #EEEEEE;
+  border-radius: 4px;
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+.navbar-header>span.horizonatal-line:last-child {
+  display: none;
+}
+.false {
+  margin-top: -5% !important;
+}
+.close-btn-img {
+  background: rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  padding: 10px;
+  margin-left: 25px;
+  height: 38px;
+}
 @media (max-width:767px) {
   .top-customer {
     margin-top: 2rem;
@@ -1183,5 +1297,20 @@ button.btn.btn-primary.add-btn {
   .mdb-datatable{
     overflow:scroll !important;
 
+  }
+  aside.sidebar {
+    z-index: 999;
+  }
+  .sidebar {
+    width: 60%;
+  }
+  .btn-group {
+    width: 100% !important;
+  }
+  .upload-input {
+    width: 50%;
+  }
+  .upload_btn {
+    width: 78px;
   }
 }

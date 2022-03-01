@@ -10,6 +10,7 @@ const ProfileDropDown = () => {
     const changeLanguage=(status)=>{
         localStorage.setItem('lang',status) //set your language to your local storage
         setShowLanguageDropDown(false)// after set language the language dropdown
+        window.location.reload()
     }
     return (
         <>
@@ -30,10 +31,15 @@ const ProfileDropDown = () => {
                 <div className="profile-dropdown-container-2">
                     <ul>
                         <li>Settings</li>
-                        <li onClick={()=>showLanguageDropDown?setShowLanguageDropDown(false):setShowLanguageDropDown(true)} style={{cursor:'pointer'}}>Language <span style={{ fontSize: "12px",marginLeft:"30px" }}>English <img src={english} style={{ width: "1.6rem", height: "1.6rem" }} /></span></li>
+                        <li onClick={()=>showLanguageDropDown?setShowLanguageDropDown(false):setShowLanguageDropDown(true)} style={{cursor:'pointer'}}>Language 
+                        <span style={{ fontSize: "12px",marginLeft:"30px" }}>{
+                        localStorage.getItem('lang')=="en"?
+                        <>English <img src={english} style={{ width: "1.6rem", height: "1.6rem" }} /></>
+                        :
+                        <>Mongolian <img src={mongolian} style={{ width: "1.6rem", height: "1.6rem" }} /></>}</span></li>
                         {showLanguageDropDown?<ul className="profile-language-dropDown">
-                            <li onClick={()=>changeLanguage(1)}><img src={english} style={{ width: "1.5rem", height: "1.5rem" }} /> English</li> 
-                            <li onClick={()=>changeLanguage(2)}><img src={mongolian} style={{ width: "1.5rem", height: "1rem" }} /> Mongolian</li> 
+                            <li onClick={()=>changeLanguage('en')}><img src={english} style={{ width: "1.5rem", height: "1.5rem" }} /> English</li> 
+                            <li onClick={()=>changeLanguage('mn')}><img src={mongolian} style={{ width: "1.5rem", height: "1rem" }} /> Mongolian</li> 
                         </ul>:null}
                         <li>Sign out</li>
 

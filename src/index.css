@@ -22,9 +22,9 @@
   display: none !important;
 }
 .top-customer-tab{
-  margin-left: 60px !important;
+  margin-left: 40px !important;
 }
-.top-customer-tab h6 {
+/* .top-customer-tab h6 {
   position: static;
   width: 100px;
   height: 18px;
@@ -40,7 +40,7 @@
   margin: 8px 0px;
   align-items: center;
   color: #49cb67;
-}
+} */
 .fa-magnifying-glass{
   margin:11px !important ;
 }
