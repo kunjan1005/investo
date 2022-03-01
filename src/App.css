@@ -1249,6 +1249,9 @@ button.btn.btn-primary.add-btn {
   margin: 0px 16px;
   color: #fff;
 }
+.navbar-header>span.horizonatal-line:last-child {
+  display: none;
+}
 @media (max-width:767px) {
   .top-customer {
     margin-top: 2rem;
