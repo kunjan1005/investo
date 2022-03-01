@@ -35,7 +35,7 @@ const Sidebar = (props) => {
 
   return (
     <>
-      <section className="app col-lg-3">
+      <section className="app col-lg-2">
         <aside className="sidebar">
           <header className="header-title d-flex  justify-content-between">
             <img src={logo} />

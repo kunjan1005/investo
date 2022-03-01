@@ -37,7 +37,7 @@ Sidebar
 ----------------*/
 .sidebar {
   position: fixed;
-  width: 25%;
+  width: 225px;
   /* border-radius: 0px 10px 10px 0px; */
   height: 100vh;
   top: 0;
@@ -528,7 +528,7 @@ a {
   font-size: 12px;
 }
 .sub-chart-filter-btns {
-  margin-left: 420px !important;
+  margin-left: 525px !important;
 }
 .sub-chart-filter-btns p {
   font-size: 16px;
@@ -582,7 +582,7 @@ a {
 }
 .customer-main-container {
   position: absolute;
-  width: 72%;
+  width: 80%;
   padding: 2rem;
   /* height: 100%; */
   background: #ffffff;
@@ -990,7 +990,7 @@ path.recharts-curve.recharts-area-area {
   /* Inside auto layout */
   order: 1;
   flex-grow: 0;
-  margin: 0px 16px;
+  margin: 0px 10px;
 }
 .home,
 .submenu,
@@ -1046,7 +1046,7 @@ svg.recharts-surface {
   font-size: 14px;
 
   line-height: 18px;
-  
+
   color: #000000;
 }
 .text-2 {
