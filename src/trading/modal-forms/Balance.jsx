@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Modal from 'react-bootstrap/Modal'
 import { Form } from 'react-bootstrap'
+import closeBtn from '../../images/logos/closeBtn.png';
 const Balance = (props) => {
     return (<>
 
@@ -21,40 +22,40 @@ const Balance = (props) => {
                         <div className="col">
                             <div>
                                 <label>Customer name</label>
-                                <input type="text" className="form-control" placeholder="Search" />
+                                <input type="text" className="form-control_" placeholder="Search" />
                             </div>
                             <div>
                                 <label>E-Mail</label>
-                                <input type="text" className="form-control" placeholder="E-Mail" />
+                                <input type="text" className="form-control_" placeholder="E-Mail" />
                             </div>
                             <div>
                                 <label>Balance</label>
-                                <input type="text" className="form-control" placeholder="Balance" />
+                                <input type="text" className="form-control_" placeholder="Balance" />
                             </div>
                             <div>
                                 <label>Securities</label>
-                                <select className='form-control'>
+                                <select className='form-control_'>
                                     <option>Choose..</option>
                                 </select>
                             </div>
                             <div>
                                 <label>Quantity</label>
-                                <input type="text" className="form-control" placeholder="Search" />
+                                <input type="text" className="form-control_" placeholder="Search" />
                             </div>
                             <div>
                                 <label>Price</label>
-                                <input type="text" className="form-control" placeholder="Price" />
+                                <input type="text" className="form-control_" placeholder="Price" />
                             </div>
                             <div>
                                 <label>Order type</label>
-                                <select className='form-control'>
+                                <select className='form-control_'>
                                     <option>Choose..</option>
                                 </select>
 
                             </div>
                             <div>
                                 <label>Conditions for fulfillment</label>
-                                <select className='form-control'>
+                                <select className='form-control_'>
                                     <option>Choose..</option>
                                 </select>
 
@@ -64,42 +65,45 @@ const Balance = (props) => {
                         <div className="col">
                             <div>
                                 <label>National iD</label>
-                                <input type="text" className="form-control" placeholder="National iD" />
+                                <input type="text" className="form-control_" placeholder="National iD" />
                             </div>
                             <div>
                                 <label>Account number</label>
-                                <input type="text" className="form-control" placeholder="Account number" />
+                                <input type="text" className="form-control_" placeholder="Account number" />
                             </div>
                             <div>
                                 <label>Possible balance</label>
-                                <input type="text" className="form-control" placeholder="Possible balance" />
+                                <input type="text" className="form-control_" placeholder="Possible balance" />
                             </div>
                             <div>
                                 <label>Available securities</label>
-                                <input type="text" className="form-control" placeholder="Available securities" />
+                                <input type="text" className="form-control_" placeholder="Available securities" />
                             </div>
                             <div>
                                 <label>Fee</label>
-                                <input type="text" className="form-control" placeholder="Fee" />
+                                <input type="text" className="form-control_" placeholder="Fee" />
                             </div>
                             <div >
                                 <label>Overall trade value</label>
-                                <input className="form-control" type='text' placeholder='Overall trade value' />
+                                <input className="form-control_" type='text' placeholder='Overall trade value' />
                             </div>
                             <div >
                                 <label>Date</label>
-                                <input className="form-control" type='date' placeholder='Date' />
+                                <input className="form-control_" type='date' placeholder='Date' />
                             </div>
                             <div >
                                 <label>Order form</label>
-                                <select className='form-control'>
+                                <select className='form-control_'>
                                     <option>Choose..</option>
                                 </select>
                             </div>
                         </div>
                         <div className='mt-3'>
-                            <button className='btn btn-default balance-add'
-                            >Add</button>
+                            <div className='btn-group'>
+                            <button className='balance-add' 
+                           >Add</button>
+                           <span><img src={closeBtn} className="close-btn-img" /></span>
+                        </div>
                         </div>
                     </div>
                 </form>
