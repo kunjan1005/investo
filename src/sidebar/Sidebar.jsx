@@ -11,6 +11,7 @@ import HistoryIcon from '@mui/icons-material/History';
 import HomeOutlinedIcon from '@mui/icons-material/HomeOutlined';
 import AttachMoneyIcon from '@mui/icons-material/AttachMoney';
 import {sidebarLang} from '../content/language'
+import i18next from "i18next";
 import $ from 'jquery'
 $(document).ready(function () {
   $(document).on('click', '#menu', function () {
@@ -46,17 +47,17 @@ const Sidebar = (props) => {
               <ul>
                 <li>
                   <NavLink to='#' classsName="menu" id='menu'>
-                    <span>MAIN MENU</span>
+                    <span>{i18next.t('main_menu')}</span>
                   </NavLink>
                   <ul className="sub-nav">
                     <li>
                       <NavLink to='/'>
-                        <HomeOutlinedIcon className='side-bar-icons' /><span className="submenu">Dashboard</span>
+                        <HomeOutlinedIcon className='side-bar-icons' /><span className="submenu">{i18next.t('sub_menu_dashboard')}</span>
                       </NavLink>
                     </li>
                     <li>
                       <NavLink to='/market'>
-                        <AttachMoneyIcon className='side-bar-icons' /><span className="submenu">Market</span>
+                        <AttachMoneyIcon className='side-bar-icons' /><span className="submenu">{i18next.t('sub_menu_market')}</span>
                       </NavLink>
                     </li>
 
@@ -65,17 +66,17 @@ const Sidebar = (props) => {
                 <li>
                   <NavLink to='#' id='menu'>
 
-                    <span className="">CUSTOMERS</span>
+                    <span className="">{i18next.t('customer_menu')}</span>
                   </NavLink>
                   <ul className="sub-nav">
                     <li>
                       <NavLink to='/customer'>
-                        <PeopleAltOutlinedIcon className="side-bar-icons" /><span className="submenu">Customer List</span>
+                        <PeopleAltOutlinedIcon className="side-bar-icons" /><span className="submenu">{i18next.t('sub_customer_list')}</span>
                       </NavLink>
                     </li>
                     <li>
                       <NavLink to='/customer/account'>
-                        <AccountBalanceWalletOutlinedIcon className="side-bar-icons" /><span className="submenu">Account</span>
+                        <AccountBalanceWalletOutlinedIcon className="side-bar-icons" /><span className="submenu">{i18next.t('sub_customer_account')}</span>
                       </NavLink>
                     </li>
 
@@ -84,22 +85,22 @@ const Sidebar = (props) => {
                 <li>
                   <NavLink to='#' id='menu'>
 
-                    <span className="">TRADING</span>
+                    <span className="">{i18next.t('trading_menu')}</span>
                   </NavLink>
                   <ul className="sub-nav">
                     <li>
                       <NavLink to='/trading/order'>
-                        <PlaylistAddIcon className='side-bar-icons' /><span className="submenu">Add order</span>
+                        <PlaylistAddIcon className='side-bar-icons' /><span className="submenu">{i18next.t('sub_trading_addorder')}</span>
                       </NavLink>
                     </li>
                     <li>
                       <NavLink to='/trading'>
-                        <ListAltIcon className="side-bar-icons" /><span className="submenu">Order list</span>
+                        <ListAltIcon className="side-bar-icons" /><span className="submenu">{i18next.t('sub_trading_orderlist')}</span>
                       </NavLink>
                     </li>
                     <li>
                       <NavLink to='/trading/history'>
-                        <HistoryIcon className="side-bar-icons" /> <span className="submenu">Trading history</span>
+                        <HistoryIcon className="side-bar-icons" /> <span className="submenu">{i18next.t('sub_trading_history')}</span>
                       </NavLink>
                     </li>
 
@@ -109,27 +110,27 @@ const Sidebar = (props) => {
                 <li>
                   <NavLink to='#'>
 
-                    <span className="">WITHDRAW</span>
+                    <span className="">{i18next.t('withdraw')}</span>
                   </NavLink>
 
                 </li>
                 <li>
                   <NavLink to='#'>
 
-                    <span className="">REPORT</span>
+                    <span className="">{i18next.t('report')}</span>
                   </NavLink>
 
                 </li>
                 <li>
                   <NavLink to='#'>
 
-                    <span className="">IPO</span>
+                    <span className="">{i18next.t('ipo')}</span>
                   </NavLink>
 
                 </li>
                 <li>
                   <NavLink to='#'>
-                    <span className="">CONTENT</span>
+                    <span className="">{i18next.t('content')}</span>
                   </NavLink>
                 </li>
               </ul>

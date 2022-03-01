@@ -6,6 +6,13 @@ import reportWebVitals from "./reportWebVitals";
 import "../node_modules/bootstrap/dist/css/bootstrap.css";
 import { BrowserRouter } from "react-router-dom";
 import { Auth0Provider } from '@auth0/auth0-react'
+import axios from "axios"
+import './i18next'
+import i18next from "i18next"
+const lang=localStorage.getItem('lang') || 'en'
+axios.baseUrl = ""
+i18next.changeLanguage(lang)
+axios.defaults.headers.common['Application-Language'] =lang
 ReactDOM.render(
   <React.StrictMode>
     <BrowserRouter>

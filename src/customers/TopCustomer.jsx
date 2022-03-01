@@ -10,10 +10,10 @@ const TopCustomer = () => {
             <h2 className='stock-text d-inline-block'>
               Top customers
             </h2>
-            <i className="fas fa-angle-right d-inline-block ml-3"></i>
+            <i className="fas fa-angle-right d-inline-block" style={{marginLeft:"1rem"}}></i>
             <div className="d-inline-block top-customer-tab">
-              <h6 className='d-inline-block'>Trading volume</h6>
-              <h6 className='d-inline-block'>Activities</h6>
+              <h6 className='d-inline-block trading-volume'>Trading volume</h6>
+              <h6 className='d-inline-block activities'>Activities</h6>
 
             </div>
             <div className='col-lg-12 col-12'>
