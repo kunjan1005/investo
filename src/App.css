@@ -37,7 +37,7 @@ Sidebar
 ----------------*/
 .sidebar {
   position: fixed;
-  width: 225px;
+  width: 213px;
   /* border-radius: 0px 10px 10px 0px; */
   height: 100vh;
   top: 0;
@@ -528,7 +528,7 @@ a {
   font-size: 12px;
 }
 .sub-chart-filter-btns {
-  margin-left: 524px !important;
+  margin-left: 475px !important;
 }
 .sub-chart-filter-btns p {
   font-size: 16px;
@@ -972,7 +972,7 @@ path.recharts-curve.recharts-area-area {
   flex: none;
   order: 1;
   flex-grow: 0;
-  margin: 0px 16px;
+  margin: 0px 5px;
 }
 .active > .side-bar-icons {
   color: green;
@@ -990,7 +990,10 @@ path.recharts-curve.recharts-area-area {
   /* Inside auto layout */
   order: 1;
   flex-grow: 0;
-  margin: 0px 10px;
+  margin: 0px 5px;
+}
+ol, ul {
+  padding-left: 1.75rem !important;
 }
 .home,
 .submenu,
