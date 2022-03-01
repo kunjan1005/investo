@@ -25,7 +25,7 @@ const Topnav = (props) => {
             </div>
             {/* this is top navbar menu  */}
             <div className="navbar-menu col-lg-8">
-              <ul className="navbar-nav d-flex">
+              <ul className="navbar-nav d-flex" style={{marginRight:"1.5rem"}}>
                 <li className="navbar-dropdown mr-2">
                   {showSearch?<div className="search-input">
                     <input placeholder="Search"  />
