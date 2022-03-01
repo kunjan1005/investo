@@ -16,7 +16,7 @@ const Topnav = (props) => {
   let [showProfile, setShowProfile] = useState(false);
   return (
     <>
-      <div className="col-lg-9">
+      <div className="col-lg-10">
         <nav className="navbar">
           <div class="container">
             <div className="navbar-header col-lg-4 col-2">
